@@ -6,7 +6,6 @@ class Node:
         self.right_child = None
 
 
-
 class BinarySearchTree:
 
     def __init__(self):
