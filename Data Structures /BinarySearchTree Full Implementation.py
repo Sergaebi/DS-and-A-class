@@ -5,17 +5,32 @@ class Node:
         self.left_child = None
         self.right_child = None
 
+    @staticmethod
+    def serialize(node, sentinel='#'):
+        serial = [node.data]
+        if node.left_child is None:
+            serial.append(sentinel)
+        else:
+            serial.extend(node.left_child.serialize(node.left_child))
+        if node.right_child is None:
+            serial.append(sentinel)
+        else:
+            serial.extend(node.right_child.serialize(node.right_child))
+        return serial
+
 
 class BinarySearchTree:
 
     def __init__(self):
         self.root = None
         self.array = []
+        self.__items_to_delete = []
 
     def insert_data(self, *args):
         removed_duplicates = []
-        [removed_duplicates.append(x) for x in args if x not in removed_duplicates]
+        [removed_duplicates.append(y) for y in args if y not in removed_duplicates]
         for data in removed_duplicates:
+            self.__items_to_delete.append(data)
             if self.root is None:
                 self.root = Node(data)
             else:
@@ -42,29 +57,30 @@ class BinarySearchTree:
             node.right_child = self.__remove_node(data, node.right_child)
         else:
             if not node.left_child and not node.right_child:
-                print("Removing a leaf node...")
+                # print("Removing a leaf node...")
                 del node
                 return None
             elif not node.left_child:
-                print("Removing a node with single right child...")
+                # print("Removing a node with single right child...")
                 temp_node = node.right_child
                 del node
                 return temp_node
             elif not node.right_child:
-                print('Removing a node with a single left child...')
+                # print('Removing a node with a single left child...')
                 temp_node = node.left_child
                 del node
                 return temp_node
             elif node.left_child and node.right_child:
-                print("Removing a node with two children...")
+                # print("Removing a node with two children...")
                 temp_node = self.get_predecessor(node.left_child)
                 node.data = temp_node.data
                 node.left_child = self.__remove_node(temp_node.data, node.left_child)
         return node
 
-    def remove(self, data):
-        if self.root:
-            self.root = self.__remove_node(data, self.root)
+    def remove(self, *args):
+        for data in args:
+            if self.root:
+                self.root = self.__remove_node(data, self.root)
 
     def get_predecessor(self, node: Node):
         if node.right_child is not None:
@@ -103,17 +119,6 @@ class BinarySearchTree:
         if self.root:
             return self.__traverse_in_order(self.root)
 
-    def __store_to_list(self, node: Node):
-        self.array.append(node.data)
-        if node.left_child:
-            self.__store_to_list(node.left_child)
-        if node.right_child:
-            self.__store_to_list(node.right_child)
-
-    def store_to_list(self):
-        if self.root:
-            return self.__store_to_list(self.root)
-
     def __get_height(self, node: Node):
         if node is None:
             return 0
@@ -123,9 +128,25 @@ class BinarySearchTree:
         if self.root:
             return self.__get_height(self.root)
 
+    def clean_all(self):
+        if self.root:
+            for data in self.__items_to_delete:
+                self.remove(data)
+
+    def serialize(self):
+        if self.root:
+            result = Node.serialize(self.root)
+            self.clean_all()
+            return result
+
+    def deserialize(self, source):
+        new_source = [value for value in source if value != '#']
+        print(new_source)
+        for data in new_source:
+            self.insert_data(int(data))
+
     def __len__(self):
-        self.store_to_list()
-        return len(self.array)
+        return len(self.__items_to_delete)
 
     def __repr__(self):
         lines = self._build_tree_string(self.root, 0, False, '-')[0]
@@ -173,6 +194,3 @@ class BinarySearchTree:
             r_line = r_box[i] if i < len(r_box) else ' ' * r_box_width
             new_box.append(l_line + gap + r_line)
         return new_box, len(new_box[0]), new_root_start, new_root_end
-
-
-tree = BinarySearchTree()
