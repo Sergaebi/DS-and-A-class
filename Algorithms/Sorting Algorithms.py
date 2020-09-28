@@ -67,3 +67,26 @@ def selection_sort(input_list):
             if input_list[min_idx] > input_list[j]:
                 min_idx = j
         input_list[idx], input_list[min_idx] = input_list[min_idx], input_list[idx]
+
+
+class QuickSort:
+
+    @classmethod
+    def quickSort(cls, arr, low, high):
+        if len(arr) == 1:
+            return arr
+        if low < high:
+            pi = cls.partition(arr, low, high)
+            cls.quickSort(arr, low, pi - 1)
+            cls.quickSort(arr, pi + 1, high)
+
+    @staticmethod
+    def partition(arr, low, high):
+        i = (low - 1)
+        pivot = arr[high]
+        for j in range(low, high):
+            if arr[j] <= pivot:
+                i = i + 1
+                arr[i], arr[j] = arr[j], arr[i]
+        arr[i + 1], arr[high] = arr[high], arr[i + 1]
+        return i + 1
