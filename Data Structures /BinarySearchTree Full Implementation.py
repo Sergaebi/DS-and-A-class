@@ -57,21 +57,17 @@ class BinarySearchTree:
             node.right_child = self.__remove_node(data, node.right_child)
         else:
             if not node.left_child and not node.right_child:
-                # print("Removing a leaf node...")
                 del node
                 return None
             elif not node.left_child:
-                # print("Removing a node with single right child...")
                 temp_node = node.right_child
                 del node
                 return temp_node
             elif not node.right_child:
-                # print('Removing a node with a single left child...')
                 temp_node = node.left_child
                 del node
                 return temp_node
             elif node.left_child and node.right_child:
-                # print("Removing a node with two children...")
                 temp_node = self.get_predecessor(node.left_child)
                 node.data = temp_node.data
                 node.left_child = self.__remove_node(temp_node.data, node.left_child)
