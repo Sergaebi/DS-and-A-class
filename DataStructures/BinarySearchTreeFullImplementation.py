@@ -201,6 +201,6 @@ class BinarySearchTree:
 random_list = [random.randint(-100, 100) for x in range(10)]
 print(random_list)
 tree = BinarySearchTree()
-for i in random_list:
-    tree.insert_data(i)
+for x in random_list:
+    tree.insert_data(x)
 print(tree)
