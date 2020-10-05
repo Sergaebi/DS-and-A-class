@@ -1,3 +1,6 @@
+import random
+
+
 class Node:
 
     def __init__(self, data):
@@ -74,8 +77,9 @@ class BinarySearchTree:
         return node
 
     def remove(self, *args):
-        for data in args:
-            if self.root:
+        if self.root:
+            for data in args:
+                self.__items_to_delete.remove(data)
                 self.root = self.__remove_node(data, self.root)
 
     def get_predecessor(self, node: Node):
@@ -129,17 +133,19 @@ class BinarySearchTree:
             for data in self.__items_to_delete:
                 self.remove(data)
 
+    def __serialize(self):
+        self.clean_all()
+        temporary = self.__items_to_delete
+        self.__items_to_delete = []
+        return temporary
+
     def serialize(self):
         if self.root:
-            result = Node.serialize(self.root)
-            self.clean_all()
-            return result
+            return self.__serialize()
 
-    def deserialize(self, source):
-        new_source = [value for value in source if value != '#']
-        print(new_source)
-        for data in new_source:
-            self.insert_data(int(data))
+    def deserialize(self, list_of_data):
+        for data in list_of_data:
+            self.insert_data(data)
 
     def __len__(self):
         return len(self.__items_to_delete)
@@ -190,3 +196,11 @@ class BinarySearchTree:
             r_line = r_box[i] if i < len(r_box) else ' ' * r_box_width
             new_box.append(l_line + gap + r_line)
         return new_box, len(new_box[0]), new_root_start, new_root_end
+
+
+random_list = [random.randint(-100, 100) for x in range(10)]
+print(random_list)
+tree = BinarySearchTree()
+for i in random_list:
+    tree.insert_data(i)
+print(tree)
