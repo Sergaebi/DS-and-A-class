@@ -8,19 +8,6 @@ class Node:
         self.left_child = None
         self.right_child = None
 
-    @staticmethod
-    def serialize(node, sentinel='#'):
-        serial = [node.data]
-        if node.left_child is None:
-            serial.append(sentinel)
-        else:
-            serial.extend(node.left_child.serialize(node.left_child))
-        if node.right_child is None:
-            serial.append(sentinel)
-        else:
-            serial.extend(node.right_child.serialize(node.right_child))
-        return serial
-
 
 class BinarySearchTree:
 
