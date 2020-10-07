@@ -27,8 +27,6 @@ class ListADT(ABC):
     def get_last(self):
         pass
 
-    # Please uncomment the block below and add the implementation of remaining functions
-
     @abstractmethod
     def insertBefore(self, data, data_to_check):
         pass
@@ -51,6 +49,7 @@ class ListADT(ABC):
 
 
 class Node:
+
     def __init__(self, data, next_node, previous=None):
         self.data = data
         self.next = next_node
@@ -58,6 +57,7 @@ class Node:
 
 
 class SingleLinkedList(ListADT):
+
     def __init__(self):
         self.first = None
         self.last = None
@@ -103,7 +103,7 @@ class SingleLinkedList(ListADT):
             self._size -= 1
             return
         tmp = self.first
-        # Iterate over the linked list to get a reference of the pre-last element
+
         while tmp.next != self.last:
             tmp = tmp.next
 
@@ -120,7 +120,6 @@ class SingleLinkedList(ListADT):
     def get_last(self):
         return self.last
 
-    # Implement the remaining functions of ListADT abstract class
     def insertBefore(self, data, data_to_check):
         if self.first and self.last:
             if self.first == self.last:
@@ -182,7 +181,7 @@ class SingleLinkedList(ListADT):
                     previous_node.next = current_node.next
                 else:
                     self.first = current_node.next
-                self.get_size -= 1
+                self._size -= 1
                 return
             else:
                 previous_node = current_node
@@ -209,12 +208,12 @@ class DoubleLinkedList(ListADT):
         if self.first is not None:
             self._size += 1
 
-    def __len__(self):
-        return self._size
-
     def insertFirst(self, data):
         if self.first and self.last:
             new_node = Node(data, self.first, None)
+            self.first.previous = new_node
+            if self.first == self.last:
+                self.last.previous = new_node
             self.first = new_node
             self._size += 1
         else:
@@ -224,15 +223,25 @@ class DoubleLinkedList(ListADT):
 
     def removeFirst(self):
         if self.first and self.last:
-            self.first.next.previous = None
-            self.first, self.first.next = self.first.next, None
-            self._size -= 1
+            if self.first == self.last:
+                self.first = None
+                self.last = None
+                self._size -= 1
+            else:
+                self.first.next.previous = None
+                temporary = self.first
+                self.first = self.first.next
+                temporary.next = None
+                self._size -= 1
         else:
             print("Nothing to remove")
 
     def insertLast(self, data):
         if self.first and self.last:
             new_node = Node(data, None, self.last)
+            self.last.next = new_node
+            if self.first == self.last:
+                self.first.next = new_node
             self.last = new_node
             self._size += 1
         else:
@@ -248,7 +257,9 @@ class DoubleLinkedList(ListADT):
                 self._size -= 1
             else:
                 self.last.previous.next = None
-                self.last, self.last.previous = self.last.previous, None
+                temporary = self.last
+                self.last = self.last.previous
+                temporary.previous = None
                 self._size -= 1
         else:
             print("Nothing to remove")
@@ -294,7 +305,7 @@ class DoubleLinkedList(ListADT):
                 index += 1
         print("No such data")
 
-    # TODO Implement all functions of ListADT abstract class for double linked list
+    # DONE Implement all functions of ListADT abstract class for double linked list
 
 
 # This is an illustration of polymorphism, where the same printList function would be applicable to single linked list and double linked list objects due to common abstract functions!
@@ -322,9 +333,13 @@ def reverseList(linked_list: SingleLinkedList):
     linked_list.last = current_node
 
 
-# TODO implement a function for list collection which updates the list through removing Numeric nodes
-def removeNumericNodes(linked_list):
-    pass
+# DONE implement a function for list collection which updates the list through removing Numeric nodes
+def removeNumericNodes(linked_list: SingleLinkedList):
+    current_node = linked_list.get_first()
+    while current_node is not None:
+        if isinstance(current_node.data, int) or isinstance(current_node.data, float):
+            linked_list.remove(current_node.data)
+        current_node = current_node.next
 
 
 # TODO implement a function for list collection which updates the list through removing nodes at even positions
@@ -332,42 +347,55 @@ def removeNodesAtEvenPosition(linked_list):
     pass
 
 
-# TODO implement a function which returns true if the the first element of the list is equal to the specified object and false if not
-def testFirst(linked_list, obj):
-    pass
+# DONE implement a function which returns true if the the first element of the list is equal to the specified object and false if not
+def testFirst(linked_list, data):
+    if linked_list.first.data == data:
+        return True
+    return False
 
 
-# TODO implement a function which returns true if the the last element of the list is equal to the specified object and false if not
-def testLast(linked_list, obj):
-    pass
+# DONE implement a function which returns true if the the last element of the list is equal to the specified object and false if not
+def testLast(linked_list, data):
+    if linked_list.last.data == data:
+        return True
+    return False
 
 
 def testListFunctions(linked_list):
+
+    # test that insertFirst and insertLast functions work as expected
+    # DONE substitute the code below with testFirst and testLast function calls
+    # ---------------------------------------------------------------------------------------
     linked_list.insertFirst(1)
     linked_list.insertFirst("a")
     linked_list.insertLast("b")
     linked_list.insertLast("c")
     linked_list.insertFirst(4)
 
-    # test that insertFirst and insertLast functions work as expected
-    # DONE substitute the code below with testFirst and testLast function calls
     if linked_list.get_first().data == 4 and linked_list.get_last().data == "c":
-        print("Insert First/Last Test: PASS")
+        print("\nInsert First/Last Test: PASS")
     else:
-        print("Insert First/Last Test:FAIL")
+        print("\nInsert First/Last Test: FAIL")
+
     printList(linked_list)
+
+    # test that removeFirst and removeLast functions work as expected
+    # DONE substitute the code below with testFirst and testLast function calls
+    # ---------------------------------------------------------------------------------------
 
     linked_list.removeFirst()
     linked_list.removeLast()
     linked_list.removeLast()
-    # test that removeFirst and removeLast functions work as expected
-    # DONE substitute the code below with testFirst and testLast function calls
+
     if linked_list.get_first().data == "a" and linked_list.get_last().data == 1:
-        print("Remove First/Last Test:PASS")
+        print("\nRemove First/Last Test: PASS")
     else:
-        print("Remove First/Last Test:FAIL")
+        print("\nRemove First/Last Test: FAIL")
+
     printList(linked_list)
 
+    # test reverseList function
+    # ---------------------------------------------------------------------------------------
     linked_list.insertLast("b")
     linked_list.insertLast("c")
     linked_list.insertFirst(4)
@@ -378,11 +406,26 @@ def testListFunctions(linked_list):
     reverseList(linked_list)
 
     if first == linked_list.get_last().data and last == linked_list.get_first().data:
-        print("Reverse List Test: PASS")
+        print("\nReverse List Test: PASS")
     else:
-        print("Reverse List Test: FAIL")
+        print("\nReverse List Test: FAIL")
     printList(linked_list)
 
+    # test removeNumericNodes function
+    # ---------------------------------------------------------------------------------------
+    removeNumericNodes(linked_list)
+
+    current_node = linked_list.first
+    check = True
+    while current_node is not None:
+        if isinstance(current_node.data, int) or isinstance(current_node.data, float):
+            print("\nRemove numeric Test: FAIL")
+            check = False
+            break
+        current_node = current_node.next
+    if check:
+        print("\nRemove numeric Test: PASS")
+    printList(linked_list)
     # TODO call newly implemented list functions and add tests for them as well similar to the above
 
 
@@ -391,5 +434,6 @@ testListFunctions(sl)
 
 # Uncomment the code below after implementing the double linked list functions and make sure that all tests pass!
 
-# dl = DoubleLinkedList()
-# testListFunctions(dl)
+print("\n---------------------------------------------------------------------------------------")
+dl = DoubleLinkedList()
+testListFunctions(dl)
