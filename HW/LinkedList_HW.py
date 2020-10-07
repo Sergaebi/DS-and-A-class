@@ -61,62 +61,67 @@ class SingleLinkedList(ListADT):
     def __init__(self):
         self.first = None
         self.last = None
-        self._size = 0
+        self.size = 0
 
+    # DONE TESTING
     def insertFirst(self, obj):
         node = Node(obj, self.first)
         self.first = node
         if self.last is None:
             self.last = node
-        self._size += 1
+        self.size += 1
 
+    # DONE TESTING
     def removeFirst(self):
         if self.first is None:
             return
-        if self._size == 1:
+        if self.size == 1:
             self.first = None
             self.last = None
-            self._size -= 1
+            self.size -= 1
             return
         tmp = self.first
         self.first = self.first.next
         tmp.next = None
-        self._size -= 1
+        self.size -= 1
 
+    # DONE TESTING
     def insertLast(self, data):
         node = Node(data, None)
         if self.last is None:
             self.first = node
             self.last = node
-            self._size += 1
+            self.size += 1
             return
         self.last.next = node
         self.last = node
-        self._size += 1
+        self.size += 1
 
+    # DONE TESTING
     def removeLast(self):
-        if self._size == 0:
+        if self.size == 0:
             return
-        if self._size == 1:
+        if self.size == 1:
             self.first = None
             self.last = None
-            self._size -= 1
+            self.size -= 1
             return
         tmp = self.first
-
         while tmp.next != self.last:
             tmp = tmp.next
-
         tmp.next = None
         self.last = tmp
-        self._size -= 1
+        self.size -= 1
 
+    # DONE TESTING
     def get_size(self):
-        return self._size
+        return self.size
 
+    # DONE TESTING
     def get_first(self):
         return self.first
 
+    # DONE TESTING
     def get_last(self):
         return self.last
 
@@ -135,7 +140,7 @@ class SingleLinkedList(ListADT):
                             self.first = new_node
                         else:
                             previous_node.next = new_node
-                        self._size += 1
+                        self.size += 1
                         return
                     else:
                         previous_node = current_node
@@ -144,7 +149,7 @@ class SingleLinkedList(ListADT):
             print("List is empty")
             self.first = Node(data, None)
             self.last = self.first
-            self._size += 1
+            self.size += 1
 
     def insertAfter(self, data, data_to_check):
         if self.first and self.last:
@@ -161,7 +166,7 @@ class SingleLinkedList(ListADT):
                             self.first = new_node
                         else:
                             current_node.next = new_node
-                        self._size += 1
+                        self.size += 1
                         return
                     else:
                         previous_node = current_node
@@ -170,8 +175,9 @@ class SingleLinkedList(ListADT):
             print("List is empty")
             self.first = Node(data, None)
             self.last = self.first
-            self._size += 1
+            self.size += 1
 
+    # DONE TESTING
     def remove(self, data):
         current_node = self.first
         previous_node = None
@@ -181,12 +187,13 @@ class SingleLinkedList(ListADT):
                     previous_node.next = current_node.next
                 else:
                     self.first = current_node.next
-                self._size -= 1
+                self.size -= 1
                 return
             else:
                 previous_node = current_node
                 current_node = current_node.next
 
+    # DONE TESTING
     def indexOf(self, data):
         current_node = self.first
         index = 0
@@ -204,10 +211,11 @@ class DoubleLinkedList(ListADT):
     def __init__(self, root=None):
         self.first = root
         self.last = root
-        self._size = 0
+        self.size = 0
         if self.first is not None:
-            self._size += 1
+            self.size += 1
 
+    # DONE TESTING
     def insertFirst(self, data):
         if self.first and self.last:
             new_node = Node(data, self.first, None)
@@ -215,27 +223,29 @@ class DoubleLinkedList(ListADT):
             if self.first == self.last:
                 self.last.previous = new_node
             self.first = new_node
-            self._size += 1
+            self.size += 1
         else:
             new_node = Node(data, None, None)
             self.first = new_node
             self.last = new_node
 
+    # DONE TESTING
     def removeFirst(self):
         if self.first and self.last:
             if self.first == self.last:
                 self.first = None
                 self.last = None
-                self._size -= 1
+                self.size -= 1
             else:
                 self.first.next.previous = None
                 temporary = self.first
                 self.first = self.first.next
                 temporary.next = None
-                self._size -= 1
+                self.size -= 1
         else:
             print("Nothing to remove")
 
+    # DONE TESTING
     def insertLast(self, data):
         if self.first and self.last:
             new_node = Node(data, None, self.last)
@@ -243,35 +253,38 @@ class DoubleLinkedList(ListADT):
             if self.first == self.last:
                 self.first.next = new_node
             self.last = new_node
-            self._size += 1
+            self.size += 1
         else:
             new_node = Node(data, None, None)
             self.first = new_node
             self.last = new_node
 
+    # DONE TESTING
     def removeLast(self):
         if self.first and self.last:
             if self.first == self.last:
                 self.first = None
                 self.last = None
-                self._size -= 1
+                self.size -= 1
             else:
                 self.last.previous.next = None
                 temporary = self.last
                 self.last = self.last.previous
                 temporary.previous = None
-                self._size -= 1
+                self.size -= 1
         else:
             print("Nothing to remove")
 
+    # DONE TESTING
     def get_first(self):
         return self.first
 
+    # DONE TESTING
     def get_last(self):
         return self.last
 
     def get_size(self):
-        return self._size
+        return self.size
 
     def insertBefore(self, data, data_to_check):
         pass
@@ -279,6 +292,7 @@ class DoubleLinkedList(ListADT):
     def insertAfter(self, data, data_to_check):
         pass
 
+    # DONE TESTING
     def remove(self, data):
         current_node = self.first
         previous_node = None
@@ -288,12 +302,13 @@ class DoubleLinkedList(ListADT):
                     previous_node.next = current_node.next
                 else:
                     self.first = current_node.next
-                self._size -= 1
+                self.size -= 1
                 return
             else:
                 previous_node = current_node
                 current_node = current_node.next
 
+    # DONE TESTING
     def indexOf(self, data):
         current_node = self.first
         index = 0
@@ -400,6 +415,52 @@ def testListFunctions(linked_list):
 
     printList(linked_list)
 
+    # test get first, last, and size
+    # DONE
+    # ---------------------------------------------------------------------------------------
+
+    if linked_list.size == linked_list.get_size():
+        print("\nGet list size: PASS")
+    else:
+        print("\nGet list size: FAIL")
+
+    if linked_list.first == linked_list.get_first():
+        print("\nGet first size: PASS")
+    else:
+        print("\nGet first size: FAIL")
+
+    if linked_list.last == linked_list.get_last():
+        print("\nGet last size: PASS")
+    else:
+        print("\nGet last size: FAIL")
+
+    # test remove function
+    # DONE
+    # ---------------------------------------------------------------------------------------
+
+    linked_list.insertLast("c")
+    linked_list.insertFirst(4)
+
+    current_node = linked_list.first
+    list_to_check = []
+    while current_node is not None:
+        list_to_check.append(current_node.data)
+        current_node = current_node.next
+    if list_to_check == [4, "a", 1, "c"]:
+        print("\nRemove Test: PASS")
+    else:
+        print("\nRemove Test: FAIl")
+    printList(linked_list)
+
+    # test indexOf function
+    # DONE
+    # ---------------------------------------------------------------------------------------
+
+    if linked_list.indexOf(1) == 2:
+        print("\nIndex function Test: PASS")
+    else:
+        print("\nIndex function: FAIl")
+
     # test reverseList function
     # DONE
     # ---------------------------------------------------------------------------------------
@@ -430,7 +491,7 @@ def testListFunctions(linked_list):
     while current_node is not None:
         list_to_check.append(current_node.data)
         current_node = current_node.next
-    if list_to_check == ["c", 1, 4]:
+    if list_to_check == ["c", "c", "a", 4]:
         print("\nRemove at even position Test: PASS")
     else:
         print("\nRemove at even position Test: FAIl")
