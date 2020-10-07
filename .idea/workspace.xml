@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="080b1e11-9114-4604-b5b5-d59f593f7e0e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/HW/LinkedList.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +35,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/HW" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Encrypter" />
     </key>
@@ -160,7 +162,8 @@
       <workItem from="1601475449803" duration="4899000" />
       <workItem from="1601630418525" duration="81000" />
       <workItem from="1601886162469" duration="5382000" />
-      <workItem from="1601999992352" duration="319000" />
+      <workItem from="1601999992352" duration="3808000" />
+      <workItem from="1602068613484" duration="2082000" />
     </task>
     <task id="LOCAL-00001" summary="change">
       <created>1601905377366</created>
