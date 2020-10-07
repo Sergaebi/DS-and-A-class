@@ -11,7 +11,7 @@ class Node:
 
 class DoublyLinkedList:
 
-    def __init__(self, root=None):
+    def __init__(self, root):
         self.root: Node = root
         self.last: Node = root
         self.size = 0

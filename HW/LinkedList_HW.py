@@ -51,9 +51,10 @@ class ListADT(ABC):
 
 
 class Node:
-    def __init__(self, data, next_node):
+    def __init__(self, data, next_node, previous=None):
         self.data = data
         self.next = next_node
+        self.previous = previous
 
 
 class SingleLinkedList(ListADT):
@@ -119,7 +120,7 @@ class SingleLinkedList(ListADT):
     def last(self):
         return self._last
 
-    # TODO Implement the remaining functions of ListADT abstract class
+    # Implement the remaining functions of ListADT abstract class
     def insertBefore(self, data, data_to_check):
         if self._first and self._last:
             if self._first == self._last:
@@ -182,11 +183,10 @@ class SingleLinkedList(ListADT):
                 else:
                     self._first = current_node.next
                 self.size -= 1
-                return True
+                return
             else:
                 previous_node = current_node
                 current_node = current_node.next
-        return False
 
     def indexOf(self, data):
         current_node = self._first
@@ -201,23 +201,59 @@ class SingleLinkedList(ListADT):
 
 
 class DoubleLinkedList(ListADT):
+
+    def __init__(self, root=None):
+        self._first = root
+        self._last = root
+        self._size = 0
+        if self._first is not None:
+            self._size += 1
+
+    def __len__(self):
+        return self._size
+
     def insertFirst(self, data):
-        pass
+        if self._first and self._last:
+            new_node = Node(data, self._first, None)
+            self._first = new_node
+            self._size += 1
+        else:
+            new_node = Node(data, None, None)
+            self._first = new_node
+            self._last = new_node
 
     def removeFirst(self):
-        pass
+        if self._first and self._last:
+            self._first.next.previous = None
+            self._first, self._first.next = self._first.next, None
+        else:
+            print("Nothing to remove")
 
     def insertLast(self, data):
-        pass
+        if self._first and self._last:
+            new_node = Node(data, None, self._last)
+            self._last = new_node
+            self._size += 1
+        else:
+            new_node = Node(data, None, None)
+            self._first = new_node
+            self._last = new_node
 
     def removeLast(self):
-        pass
+        if self._first and self._last:
+            self._last.previous.next = None
+            self._last, self._last.previous = self._last.previous, None
+        else:
+            print("Nothing to remove")
 
     def first(self):
-        pass
+        return self._first
 
     def last(self):
-        pass
+        return self._last
+
+    def size(self):
+        return self._size
 
     def insertBefore(self, data, data_to_check):
         pass
@@ -226,15 +262,32 @@ class DoubleLinkedList(ListADT):
         pass
 
     def remove(self, data):
-        pass
+        current_node = self._first
+        previous_node = None
+        while current_node is not None:
+            if current_node.data == data:
+                if previous_node is not None:
+                    previous_node.next = current_node.next
+                else:
+                    self._first = current_node.next
+                self.size -= 1
+                return
+            else:
+                previous_node = current_node
+                current_node = current_node.next
 
     def indexOf(self, data):
-        pass
+        current_node = self._first
+        index = 0
+        while current_node.next is not None:
+            if current_node.data == data:
+                return index
+            else:
+                current_node = current_node.next
+                index += 1
+        print("No such data")
 
-    def size(self):
-        pass
-
-    # Implement all functions of ListADT abstract class for double linked list
+    # TODO Implement all functions of ListADT abstract class for double linked list
 
 
 # This is an illustration of polymorphism, where the same printList function would be applicable to single linked list and double linked list objects due to common abstrct functions!
