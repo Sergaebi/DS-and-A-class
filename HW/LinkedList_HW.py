@@ -308,7 +308,6 @@ class DoubleLinkedList(ListADT):
     # DONE Implement all functions of ListADT abstract class for double linked list
 
 
-# This is an illustration of polymorphism, where the same printList function would be applicable to single linked list and double linked list objects due to common abstract functions!
 def printList(linked_list):
     print("Printing Linked List Elements")
     current = linked_list.get_first()
@@ -342,9 +341,15 @@ def removeNumericNodes(linked_list: SingleLinkedList):
         current_node = current_node.next
 
 
-# TODO implement a function for list collection which updates the list through removing nodes at even positions
+# DONE implement a function for list collection which updates the list through removing nodes at even positions
 def removeNodesAtEvenPosition(linked_list):
-    pass
+    current_node = linked_list.first.next
+    while current_node is not None:
+        linked_list.remove(current_node.data)
+        try:
+            current_node = current_node.next.next
+        except AttributeError:
+            return
 
 
 # DONE implement a function which returns true if the the first element of the list is equal to the specified object and false if not
@@ -366,6 +371,7 @@ def testListFunctions(linked_list):
     # test that insertFirst and insertLast functions work as expected
     # DONE substitute the code below with testFirst and testLast function calls
     # ---------------------------------------------------------------------------------------
+
     linked_list.insertFirst(1)
     linked_list.insertFirst("a")
     linked_list.insertLast("b")
@@ -395,7 +401,9 @@ def testListFunctions(linked_list):
     printList(linked_list)
 
     # test reverseList function
+    # DONE
     # ---------------------------------------------------------------------------------------
+
     linked_list.insertLast("b")
     linked_list.insertLast("c")
     linked_list.insertFirst(4)
@@ -412,28 +420,46 @@ def testListFunctions(linked_list):
     printList(linked_list)
 
     # test removeNumericNodes function
+    # DONE
     # ---------------------------------------------------------------------------------------
+
+    removeNodesAtEvenPosition(linked_list)
+
+    current_node = linked_list.first
+    list_to_check = []
+    while current_node is not None:
+        list_to_check.append(current_node.data)
+        current_node = current_node.next
+    if list_to_check == ["c", 1, 4]:
+        print("\nRemove at even position Test: PASS")
+    else:
+        print("\nRemove at even position Test: FAIl")
+    printList(linked_list)
+
+    # test removeNumericNodes function
+    # DONE
+    # ---------------------------------------------------------------------------------------
+
     removeNumericNodes(linked_list)
 
     current_node = linked_list.first
     check = True
     while current_node is not None:
         if isinstance(current_node.data, int) or isinstance(current_node.data, float):
-            print("\nRemove numeric Test: FAIL")
+            print("\nRemove numeric values Test: FAIL")
             check = False
             break
         current_node = current_node.next
     if check:
-        print("\nRemove numeric Test: PASS")
+        print("\nRemove numeric values Test: PASS")
     printList(linked_list)
-    # TODO call newly implemented list functions and add tests for them as well similar to the above
+    # DONE call newly implemented list functions and add tests for them as well similar to the above
 
 
 sl = SingleLinkedList()
 testListFunctions(sl)
 
-# Uncomment the code below after implementing the double linked list functions and make sure that all tests pass!
-
 print("\n---------------------------------------------------------------------------------------")
+
 dl = DoubleLinkedList()
 testListFunctions(dl)
