@@ -5,7 +5,7 @@ class Node:
         self.next_node = next_node
 
     def __repr__(self):
-        return "(" + str(self.data, self.next_node) + ")"
+        return f"( {self.data} )"
 
 
 class LinkedList:
@@ -43,8 +43,31 @@ class LinkedList:
                 current_node = current_node.next_node
         return False
 
+    def reverseList(self):
+        previous_node = None
+        current_node = self.root
+        while current_node is not None:
+            next = current_node.next_node
+            current_node.next_node = previous_node
+            previous_node = current_node
+            current_node = next
+        self.root = previous_node
+
     def print_list(self):
         current_node = self.root
         while current_node is not None:
-            print(current_node, end="->")
+            print(current_node, end=" -> ")
             current_node = current_node.next_node
+
+
+linked_list = LinkedList()
+linked_list.add_beginning(4)
+linked_list.add_beginning(76)
+linked_list.add_beginning(3)
+linked_list.add_beginning(0)
+linked_list.add_beginning(1)
+
+linked_list.print_list()
+linked_list.reverseList()
+print("\n")
+linked_list.print_list()
