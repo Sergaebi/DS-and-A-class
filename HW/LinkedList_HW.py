@@ -290,7 +290,7 @@ class DoubleLinkedList(ListADT):
     # TODO Implement all functions of ListADT abstract class for double linked list
 
 
-# This is an illustration of polymorphism, where the same printList function would be applicable to single linked list and double linked list objects due to common abstrct functions!
+# This is an illustration of polymorphism, where the same printList function would be applicable to single linked list and double linked list objects due to common abstract functions!
 def printList(linked_list):
     print("Printing Linked List Elements")
     current = linked_list.first()
@@ -314,12 +314,12 @@ def removeNodesAtEvenPosition(linked_list):
     pass
 
 
-# TODO implement a function which returns true if the the first element of the list is equel to the specified object and false if not
+# TODO implement a function which returns true if the the first element of the list is equal to the specified object and false if not
 def testFirst(linked_list, obj):
     pass
 
 
-# TODO implement a function which returns true if the the last element of the list is equel to the specified object and false if not
+# TODO implement a function which returns true if the the last element of the list is equal to the specified object and false if not
 def testLast(linked_list, obj):
     pass
 
@@ -363,13 +363,13 @@ def testListFunctions(linked_list):
         print("Reverse List Test: FAIL")
     printList(linked_list)
 
-    # TODO call newly implmented list functions and add tests for them as well similar to the above
+    # TODO call newly implemented list functions and add tests for them as well similar to the above
 
 
 sl = SingleLinkedList()
 testListFunctions(sl)
 
-# TODO Uncomment the code below after implementing the double linked list funcitons and make sure that all tests pass!
+# TODO Uncomment the code below after implementing the double linked list functions and make sure that all tests pass!
 '''
 dl = DoubleLinkedList()
 testListFunctions(dl)

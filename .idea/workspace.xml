@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="080b1e11-9114-4604-b5b5-d59f593f7e0e" name="Default Changelist" comment="change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW/LinkedList.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW/LinkedList.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/LinkedList_HW.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW/LinkedList_HW.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +163,7 @@
       <workItem from="1601630418525" duration="81000" />
       <workItem from="1601886162469" duration="5382000" />
       <workItem from="1601999992352" duration="3808000" />
-      <workItem from="1602068613484" duration="2613000" />
+      <workItem from="1602068613484" duration="4048000" />
     </task>
     <task id="LOCAL-00001" summary="change">
       <created>1601905377366</created>
@@ -214,6 +214,10 @@
     </state>
     <state width="1398" height="396" key="GridCell.Tab.0.right/0.0.1440.794@0.0.1440.794" timestamp="1601628957083" />
     <state width="1398" height="267" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1601994682063" />
+    <state x="598" y="371" key="VCS.EditChangelistDialog" timestamp="1602076826572">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="598" y="371" key="VCS.EditChangelistDialog/0.0.1440.900@0.0.1440.900" timestamp="1602076826572" />
     <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1601905419870">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
