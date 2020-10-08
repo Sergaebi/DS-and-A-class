@@ -125,57 +125,44 @@ class SingleLinkedList(ListADT):
     def get_last(self):
         return self.last
 
+    # DONE TESTING
     def insertBefore(self, data, data_to_check):
         if self.first and self.last:
-            if self.first == self.last:
-                self.insertFirst(data)
-            else:
-                current_node = self.first
-                previous_node = None
-                while current_node is not None:
-                    if current_node.data == data_to_check:
-                        new_node = Node(data, current_node)
-                        if previous_node is None:
-                            print(f"Now {data} is the root")
-                            self.first = new_node
-                        else:
-                            previous_node.next = new_node
-                        self.size += 1
-                        return
+            current_node = self.first
+            previous_node = None
+            while current_node is not None:
+                if current_node.data == data_to_check:
+                    new_node = Node(data, current_node)
+                    if previous_node is None:
+                        self.first = new_node
                     else:
-                        previous_node = current_node
-                        current_node = current_node.next
+                        previous_node.next = new_node
+                    self.size += 1
+                    return
+                else:
+                    previous_node = current_node
+                    current_node = current_node.next
         else:
             print("List is empty")
-            self.first = Node(data, None)
-            self.last = self.first
-            self.size += 1
 
+    # DONE TESTING
     def insertAfter(self, data, data_to_check):
         if self.first and self.last:
-            if self.first == self.last:
-                self.insertLast(data)
-            else:
-                current_node = self.first
-                previous_node = None
-                while current_node is not None:
-                    if current_node.data == data_to_check:
-                        new_node = Node(data, current_node.next)
-                        if previous_node is None:
-                            print(f"Now {data} is the root")
-                            self.first = new_node
-                        else:
-                            current_node.next = new_node
-                        self.size += 1
-                        return
+            current_node = self.first
+            while current_node is not None:
+                if current_node.data == data_to_check:
+                    new_node = Node(data, current_node.next)
+                    if current_node.next is None:
+                        current_node.next = new_node
+                        self.last = new_node
                     else:
-                        previous_node = current_node
-                        current_node = current_node.next
+                        current_node.next = new_node
+                    self.size += 1
+                    return
+                else:
+                    current_node = current_node.next
         else:
             print("List is empty")
-            self.first = Node(data, None)
-            self.last = self.first
-            self.size += 1
 
     # DONE TESTING
     def remove(self, data):
@@ -283,14 +270,54 @@ class DoubleLinkedList(ListADT):
     def get_last(self):
         return self.last
 
+    # DONE TESTING
     def get_size(self):
         return self.size
 
+    # DONE TESTING
     def insertBefore(self, data, data_to_check):
-        pass
+        if self.first and self.last:
+            previous_node = None
+            current_node = self.first
+            while current_node is not None:
+                if current_node.data == data_to_check:
+                    new_node = Node(data, current_node, previous_node)
+                    if previous_node is None:
+                        self.first.previous = new_node
+                        self.first = new_node
+                    else:
+                        previous_node.next = new_node
+                        current_node.next.previous = new_node
+                    self.size += 1
+                    return
+                else:
+                    previous_node = current_node
+                    current_node = current_node.next
+            print("Nothing to insert after")
+            return
+        else:
+            print("List is empty")
 
+    # DONE TESTING
     def insertAfter(self, data, data_to_check):
-        pass
+        if self.first and self.last:
+            current_node = self.first
+            while current_node is not None:
+                if current_node.data == data_to_check:
+                    new_node = Node(data, current_node.next, current_node)
+                    if current_node.next is None:
+                        current_node.next = new_node
+                    else:
+                        current_node.next.previous = new_node
+                        current_node.next = new_node
+                    self.size += 1
+                    return
+                else:
+                    current_node = current_node.next
+            print("Nothing to insert after")
+            return
+        else:
+            print("List is empty")
 
     # DONE TESTING
     def remove(self, data):
@@ -326,9 +353,18 @@ class DoubleLinkedList(ListADT):
 def printList(linked_list):
     print("Printing Linked List Elements")
     current = linked_list.get_first()
-    while current is not None:
-        print(str(current.data))
-        current = current.next
+    if isinstance(linked_list, SingleLinkedList):
+        while current is not None:
+            print(f"( {current.data} ) -> ", end="")
+            current = current.next
+        print("None")
+    else:
+        print("None -> ", end="")
+        while current is not None:
+            print(f" <- ( {current.data} ) -> ", end="")
+            current = current.next
+        print(" <- None")
+    print()
 
 
 # DONE implement a function for list collection which reverses the list
@@ -434,10 +470,30 @@ def testListFunctions(linked_list):
     else:
         print("\nGet last size: FAIL")
 
+    # test insert After and Before functions
+    # DONE
+    # ---------------------------------------------------------------------------------------
+
+    linked_list.insertAfter(4, "a")
+    linked_list.insertBefore("c", 4)
+
+    current_node = linked_list.first
+    list_to_check = []
+    while current_node is not None:
+        list_to_check.append(current_node.data)
+        current_node = current_node.next
+    if list_to_check == ["a", "c", 4, 1]:
+        print("\nInsert Before After Test: PASS")
+    else:
+        print("\nInsert Before After Test: FAIl")
+    printList(linked_list)
+
     # test remove function
     # DONE
     # ---------------------------------------------------------------------------------------
 
+    linked_list.remove("c")
+    linked_list.remove(4)
     linked_list.insertLast("c")
     linked_list.insertFirst(4)
 
@@ -520,6 +576,7 @@ def testListFunctions(linked_list):
 sl = SingleLinkedList()
 testListFunctions(sl)
 
+# Just border to separate testing for Single and Double linked lists
 print("\n---------------------------------------------------------------------------------------")
 
 dl = DoubleLinkedList()
