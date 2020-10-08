@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="080b1e11-9114-4604-b5b5-d59f593f7e0e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/DataStructures/SkipList.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW/LinkedList_HW.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW/LinkedList_HW.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +40,7 @@
       <recent name="$PROJECT_DIR$/Encrypter" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.LinkedList_HW">
+  <component name="RunManager" selected="Python.SCRATCH">
     <configuration name="BinarySearchTreeFullImplementation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DS&amp;A Class" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -153,9 +153,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.SCRATCH" />
         <item itemvalue="Python.LinkedList_HW" />
         <item itemvalue="Python.LinkedList" />
-        <item itemvalue="Python.SCRATCH" />
         <item itemvalue="Python.BinarySearchTreeFullImplementation" />
         <item itemvalue="Python.Encrypt_file" />
       </list>
@@ -186,7 +186,7 @@
       <workItem from="1601630418525" duration="81000" />
       <workItem from="1601886162469" duration="5382000" />
       <workItem from="1601999992352" duration="3808000" />
-      <workItem from="1602068613484" duration="20960000" />
+      <workItem from="1602068613484" duration="22091000" />
     </task>
     <task id="LOCAL-00001" summary="change">
       <created>1601905377366</created>
@@ -223,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602099708068</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="All testing done">
+      <created>1602137065997</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1602137065997</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,56 +245,57 @@
     <MESSAGE value="Fully completed task finishing with implementing &quot;removeAtEven&quot;" />
     <MESSAGE value="Added testing for almost all functions except insertAfter and Before" />
     <MESSAGE value="All testing done except insertAfter and before" />
-    <option name="LAST_COMMIT_MESSAGE" value="All testing done except insertAfter and before" />
+    <MESSAGE value="All testing done" />
+    <option name="LAST_COMMIT_MESSAGE" value="All testing done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1602070876477">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1602070876477" />
-    <state x="230" y="0" width="977" height="761" key="CommitChangelistDialog2" timestamp="1602099707906">
+    <state x="230" y="0" width="977" height="761" key="CommitChangelistDialog2" timestamp="1602137065812">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="230" y="0" width="977" height="761" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1602099707906" />
-    <state width="1398" height="416" key="GridCell.Tab.0.bottom" timestamp="1602136466289">
+    <state x="230" y="0" width="977" height="761" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1602137065812" />
+    <state width="1398" height="420" key="GridCell.Tab.0.bottom" timestamp="1602145826462">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="396" key="GridCell.Tab.0.bottom/0.0.1440.794@0.0.1440.794" timestamp="1601628957084" />
-    <state width="1398" height="416" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1602136466289" />
-    <state width="1398" height="416" key="GridCell.Tab.0.center" timestamp="1602136466288">
+    <state width="1398" height="420" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1602145826462" />
+    <state width="1398" height="420" key="GridCell.Tab.0.center" timestamp="1602145826461">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="396" key="GridCell.Tab.0.center/0.0.1440.794@0.0.1440.794" timestamp="1601628957082" />
-    <state width="1398" height="416" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1602136466288" />
-    <state width="1398" height="416" key="GridCell.Tab.0.left" timestamp="1602136466288">
+    <state width="1398" height="420" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1602145826461" />
+    <state width="1398" height="420" key="GridCell.Tab.0.left" timestamp="1602145826460">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="396" key="GridCell.Tab.0.left/0.0.1440.794@0.0.1440.794" timestamp="1601628957079" />
-    <state width="1398" height="416" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1602136466288" />
-    <state width="1398" height="416" key="GridCell.Tab.0.right" timestamp="1602136466289">
+    <state width="1398" height="420" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1602145826460" />
+    <state width="1398" height="420" key="GridCell.Tab.0.right" timestamp="1602145826462">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="396" key="GridCell.Tab.0.right/0.0.1440.794@0.0.1440.794" timestamp="1601628957083" />
-    <state width="1398" height="416" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1602136466289" />
+    <state width="1398" height="420" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1602145826462" />
     <state x="598" y="371" key="VCS.EditChangelistDialog" timestamp="1602076826572">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="598" y="371" key="VCS.EditChangelistDialog/0.0.1440.900@0.0.1440.900" timestamp="1602076826572" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1602099716248">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1602137079558">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1602099716248" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1602137079558" />
     <state x="383" y="194" width="672" height="678" key="search.everywhere.popup" timestamp="1601905296620">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="383" y="194" width="672" height="678" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1601905296620" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/DS_A_Class$SCRATCH.coverage" NAME="SCRATCH Coverage Results" MODIFIED="1602086073776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DS_A_Class$SCRATCH.coverage" NAME="SCRATCH Coverage Results" MODIFIED="1602145801151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DS_A_Class$Decrypt_file.coverage" NAME="Decrypt_file Coverage Results" MODIFIED="1601487121655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DS_A_Class$Encrypt_file.coverage" NAME="Encrypt_file Coverage Results" MODIFIED="1601485696327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DS_A_Class$BinarySearchTree_Full_Implementation.coverage" NAME="BinarySearchTree Full Implementation Coverage Results" MODIFIED="1601905120746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data Structures " />
     <SUITE FILE_PATH="coverage/DS_A_Class$LinkedList.coverage" NAME="LinkedList Coverage Results" MODIFIED="1602086813244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataStructures" />
-    <SUITE FILE_PATH="coverage/DS_A_Class$LinkedList_HW.coverage" NAME="LinkedList_HW Coverage Results" MODIFIED="1602136420344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW" />
+    <SUITE FILE_PATH="coverage/DS_A_Class$LinkedList_HW.coverage" NAME="LinkedList_HW Coverage Results" MODIFIED="1602137241289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW" />
   </component>
 </project>
