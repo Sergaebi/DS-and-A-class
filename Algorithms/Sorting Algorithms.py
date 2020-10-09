@@ -90,3 +90,20 @@ class QuickSort:
                 arr[i], arr[j] = arr[j], arr[i]
         arr[i + 1], arr[high] = arr[high], arr[i + 1]
         return i + 1
+
+
+def countSort(arr):
+
+    output = [0 for i in range(256)]
+    count = [0 for i in range(256)]
+    ans = ["" for _ in arr]
+    for i in arr:
+        count[ord(i)] += 1
+    for i in range(256):
+        count[i] += count[i-1]
+    for i in range(len(arr)):
+        output[count[ord(arr[i])]-1] = arr[i]
+        count[ord(arr[i])] -= 1
+    for i in range(len(arr)):
+        ans[i] = output[i]
+    return ans
