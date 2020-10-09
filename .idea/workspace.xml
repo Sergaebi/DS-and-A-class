@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="080b1e11-9114-4604-b5b5-d59f593f7e0e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DataStructures/AVLTree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithms/Sorting Algorithms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithms/Sorting Algorithms.py" afterDir="false" />
-    </list>
+    <list default="true" id="080b1e11-9114-4604-b5b5-d59f593f7e0e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -188,7 +184,7 @@
       <workItem from="1601886162469" duration="5382000" />
       <workItem from="1601999992352" duration="3808000" />
       <workItem from="1602068613484" duration="22657000" />
-      <workItem from="1602239251060" duration="387000" />
+      <workItem from="1602239251060" duration="802000" />
     </task>
     <task id="LOCAL-00001" summary="change">
       <created>1601905377366</created>

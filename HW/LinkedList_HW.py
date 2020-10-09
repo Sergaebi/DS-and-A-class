@@ -367,6 +367,7 @@ def printList(linked_list):
     print()
 
 
+# DONE TESTING
 # DONE implement a function for list collection which reverses the list
 def reverseList(linked_list: SingleLinkedList):
     previous_node = None
@@ -383,6 +384,7 @@ def reverseList(linked_list: SingleLinkedList):
     linked_list.last = current_node
 
 
+# DONE TESTING
 # DONE implement a function for list collection which updates the list through removing Numeric nodes
 def removeNumericNodes(linked_list: SingleLinkedList):
     current_node = linked_list.get_first()
@@ -392,6 +394,7 @@ def removeNumericNodes(linked_list: SingleLinkedList):
         current_node = current_node.next
 
 
+# DONE TESTING
 # DONE implement a function for list collection which updates the list through removing nodes at even positions
 def removeNodesAtEvenPosition(linked_list):
     current_node = linked_list.first.next
