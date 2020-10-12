@@ -1,7 +1,6 @@
 class MaxHeap:
 
     def __init__(self, items=None):
-        # super().__init__()
         self.heap = [0]
         if items is not None:
             for item in items:
@@ -50,4 +49,3 @@ class MaxHeap:
 
     def __repr__(self):
         return self.heap
-

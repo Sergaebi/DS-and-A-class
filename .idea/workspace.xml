@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="080b1e11-9114-4604-b5b5-d59f593f7e0e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DataStructures/HashTable.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStructures/Graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataStructures/Graph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStructures/MaxHeap.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataStructures/MaxHeap.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +44,29 @@
       <recent name="$PROJECT_DIR$/Encrypter" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.HashTable">
+  <component name="RunManager" selected="Python.Graph">
+    <configuration name="Graph" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DS&amp;A Class" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DataStructures" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataStructures/Graph.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="HashTable" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DS&amp;A Class" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -58,28 +81,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataStructures/HashTable.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="LinkedList" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DS&amp;A Class" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DataStructures" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataStructures/LinkedList.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -156,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Graph" />
         <item itemvalue="Python.HashTable" />
         <item itemvalue="Python.SCRATCH" />
         <item itemvalue="Python.StackADT_HW" />
         <item itemvalue="Python.LinkedList_HW" />
-        <item itemvalue="Python.LinkedList" />
       </list>
     </recent_temporary>
   </component>
@@ -193,7 +194,7 @@
       <workItem from="1602239251060" duration="1522000" />
       <workItem from="1602307335026" duration="3507000" />
       <workItem from="1602352999783" duration="1404000" />
-      <workItem from="1602405731966" duration="955000" />
+      <workItem from="1602405731966" duration="2322000" />
     </task>
     <task id="LOCAL-00001" summary="change">
       <created>1601905377366</created>
@@ -251,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602243234420</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added HashTable.py DS">
+      <created>1602406701933</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1602406701933</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,53 +276,54 @@
     <MESSAGE value="All testing done except insertAfter and before" />
     <MESSAGE value="All testing done" />
     <MESSAGE value="Minor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor changes" />
+    <MESSAGE value="Added HashTable.py DS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added HashTable.py DS" />
   </component>
   <component name="WindowStateProjectService">
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1602307926301">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1602307926301" />
-    <state x="230" y="0" width="977" height="761" key="CommitChangelistDialog2" timestamp="1602243234118">
+    <state x="230" y="0" width="977" height="761" key="CommitChangelistDialog2" timestamp="1602406701675">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="230" y="0" width="977" height="761" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1602243234118" />
-    <state width="1398" height="208" key="GridCell.Tab.0.bottom" timestamp="1602406685077">
+    <state x="230" y="0" width="977" height="761" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1602406701675" />
+    <state width="1398" height="208" key="GridCell.Tab.0.bottom" timestamp="1602446129477">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="208" key="GridCell.Tab.0.bottom/0.0.1440.761@0.0.1440.761" timestamp="1602400163775" />
     <state width="1398" height="420" key="GridCell.Tab.0.bottom/0.0.1440.780@0.0.1440.780" timestamp="1602246158470" />
     <state width="1398" height="396" key="GridCell.Tab.0.bottom/0.0.1440.794@0.0.1440.794" timestamp="1601628957084" />
-    <state width="1398" height="208" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1602406685076" />
-    <state width="1398" height="208" key="GridCell.Tab.0.center" timestamp="1602406685075">
+    <state width="1398" height="208" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1602446129477" />
+    <state width="1398" height="208" key="GridCell.Tab.0.center" timestamp="1602446129475">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="208" key="GridCell.Tab.0.center/0.0.1440.761@0.0.1440.761" timestamp="1602400163773" />
     <state width="1398" height="420" key="GridCell.Tab.0.center/0.0.1440.780@0.0.1440.780" timestamp="1602246158433" />
     <state width="1398" height="396" key="GridCell.Tab.0.center/0.0.1440.794@0.0.1440.794" timestamp="1601628957082" />
-    <state width="1398" height="208" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1602406685075" />
-    <state width="1398" height="208" key="GridCell.Tab.0.left" timestamp="1602406685074">
+    <state width="1398" height="208" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1602446129475" />
+    <state width="1398" height="208" key="GridCell.Tab.0.left" timestamp="1602446129475">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="208" key="GridCell.Tab.0.left/0.0.1440.761@0.0.1440.761" timestamp="1602400163770" />
     <state width="1398" height="420" key="GridCell.Tab.0.left/0.0.1440.780@0.0.1440.780" timestamp="1602246158428" />
     <state width="1398" height="396" key="GridCell.Tab.0.left/0.0.1440.794@0.0.1440.794" timestamp="1601628957079" />
-    <state width="1398" height="208" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1602406685074" />
-    <state width="1398" height="208" key="GridCell.Tab.0.right" timestamp="1602406685076">
+    <state width="1398" height="208" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1602446129475" />
+    <state width="1398" height="208" key="GridCell.Tab.0.right" timestamp="1602446129476">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="208" key="GridCell.Tab.0.right/0.0.1440.761@0.0.1440.761" timestamp="1602400163774" />
     <state width="1398" height="420" key="GridCell.Tab.0.right/0.0.1440.780@0.0.1440.780" timestamp="1602246158434" />
     <state width="1398" height="396" key="GridCell.Tab.0.right/0.0.1440.794@0.0.1440.794" timestamp="1601628957083" />
-    <state width="1398" height="208" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1602406685076" />
+    <state width="1398" height="208" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1602446129476" />
     <state x="598" y="371" key="VCS.EditChangelistDialog" timestamp="1602076826572">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="598" y="371" key="VCS.EditChangelistDialog/0.0.1440.900@0.0.1440.900" timestamp="1602076826572" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1602243247680">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1602406706278">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1602243247680" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1602406706278" />
     <state x="383" y="194" width="672" height="678" key="search.everywhere.popup" timestamp="1602310593244">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -322,8 +331,9 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DS_A_Class$SCRATCH.coverage" NAME="SCRATCH Coverage Results" MODIFIED="1602353097341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DS_A_Class$Graph.coverage" NAME="Graph Coverage Results" MODIFIED="1602446085378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataStructures" />
     <SUITE FILE_PATH="coverage/DS_A_Class$StackADT_HW.coverage" NAME="StackADT_HW Coverage Results" MODIFIED="1602328749043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW" />
-    <SUITE FILE_PATH="coverage/DS_A_Class$HashTable.coverage" NAME="HashTable Coverage Results" MODIFIED="1602406611989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataStructures" />
+    <SUITE FILE_PATH="coverage/DS_A_Class$HashTable.coverage" NAME="HashTable Coverage Results" MODIFIED="1602446079742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataStructures" />
     <SUITE FILE_PATH="coverage/DS_A_Class$Decrypt_file.coverage" NAME="Decrypt_file Coverage Results" MODIFIED="1601487121655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DS_A_Class$Encrypt_file.coverage" NAME="Encrypt_file Coverage Results" MODIFIED="1601485696327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DS_A_Class$BinarySearchTree_Full_Implementation.coverage" NAME="BinarySearchTree Full Implementation Coverage Results" MODIFIED="1601905120746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data Structures " />
