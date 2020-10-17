@@ -475,7 +475,6 @@ def main():
     linked_list.insert_first(53)
     linked_list.insert_first(49)
 
-    old_linked_list = linked_list
     print("\t", end="")
     print("Old list before dividing : ", end="")
     print(linked_list, end="")
