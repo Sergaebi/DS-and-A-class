@@ -394,7 +394,7 @@ def main():
     # TESTING PROBLEM 3
     # -----------------------------------------------------------------------------------------------------------
 
-    print("TESTING Problem 3: DoubleLinkedList")
+    print("\nTESTING Problem 3: DoubleLinkedList")
     linked_list = DoubleLinkedList()
 
     # test that insertFirst and insertLast functions
@@ -465,6 +465,53 @@ def main():
 
     print("\t", end="")
     print(linked_list, end="")
+
+    # TESTING PROBLEM 4
+    # -----------------------------------------------------------------------------------------------------------
+
+    print("TESTING Problem 4: Even and Odd position\n")
+
+    linked_list.insert_first(23)
+    linked_list.insert_first(53)
+    linked_list.insert_first(49)
+
+    old_linked_list = linked_list
+    print("\t", end="")
+    print("Old list before dividing : ", end="")
+    print(linked_list, end="")
+
+    even_position, odd_position = divide_to_odd_and_even_linked_list(linked_list)
+
+    result = True
+
+    current_node = even_position.first
+    list_to_check = []
+    while current_node is not None:
+        list_to_check.append(current_node.data)
+        current_node = current_node.next
+
+    if list_to_check != [49, 23, 'c', 1]:
+        result = False
+
+    current_node = odd_position.first
+    list_to_check = []
+    while current_node is not None:
+        list_to_check.append(current_node.data)
+        current_node = current_node.next
+
+    if list_to_check != [53, 'a', 4]:
+        result = False
+
+    if result:
+        print("\n\tDivide to two lists at even and odd positions Test: PASS\n")
+    else:
+        print("\n\tDivide to two lists at even and odd positions Test: FAIL\n")
+
+    print("\tEven position list: ", end="")
+    print(even_position, end="")
+
+    print("\tOdd position list: ", end="")
+    print(odd_position, end="")
 
 
 main()
