@@ -397,7 +397,7 @@ def removeNumericNodes(linked_list: SingleLinkedList):
 # DONE TESTING
 # DONE implement a function for list collection which updates the list through removing nodes at even positions
 def removeNodesAtEvenPosition(linked_list):
-    current_node = linked_list.first.next
+    current_node = linked_list.first
     while current_node is not None:
         linked_list.remove(current_node.data)
         try:
