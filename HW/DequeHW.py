@@ -350,7 +350,7 @@ def main():
     print("TESTING Problem 2: Deque with DoubleLinkedList")
     deque = Deque()
 
-    # test that add_first and add_last functions
+    # test add_first and add_last functions
     # ----------------------------------------------------
 
     deque.add_first(1)
@@ -367,7 +367,7 @@ def main():
     print("\t", end="")
     print(deque, end="")
 
-    # test that removeFirst and removeLast functions
+    # test removeFirst and removeLast functions
     # ----------------------------------------------------
 
     deque.remove_first()
@@ -406,7 +406,7 @@ def main():
     print("\nTESTING Problem 3: DoubleLinkedList")
     linked_list = DoubleLinkedList()
 
-    # test that insertFirst and insertLast functions
+    # test insertFirst and insertLast functions
     # ----------------------------------------------------
 
     linked_list.insert_first(1)
@@ -423,7 +423,7 @@ def main():
     print("\t", end="")
     print(linked_list, end="")
 
-    # test that remove_first and remove_last functions
+    # test remove_first and remove_last functions
     # ----------------------------------------------------
 
     linked_list.remove_first()

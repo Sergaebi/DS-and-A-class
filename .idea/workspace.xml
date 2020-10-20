@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="080b1e11-9114-4604-b5b5-d59f593f7e0e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DataStructures/RedBlackTree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DS&amp;A Class.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DS&amp;A Class.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW/DequeHW.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW/DequeHW.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +24,9 @@
     <setting file="file://$PROJECT_DIR$/DataStructures/HashTable.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JupyterTrust" id="9c6435e2-0289-4742-b5f2-bae6f8daebf4" />
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="lcdebbyz" />
+  </component>
   <component name="ProjectId" id="1hzy2r2atk5c12LL9VoZy074Jj3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -36,9 +36,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -161,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.DequeHW" />
-        <item itemvalue="Python.RedBlackTree" />
         <item itemvalue="Python.SCRATCH" />
+        <item itemvalue="Python.RedBlackTree" />
         <item itemvalue="Python.Queue_LinkedList" />
         <item itemvalue="Python.LinkedList_HW" />
+        <item itemvalue="Python.DequeHW" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +208,15 @@
       <workItem from="1602966154668" duration="60000" />
       <workItem from="1602966246969" duration="90000" />
       <workItem from="1602966353478" duration="750000" />
-      <workItem from="1603137343369" duration="3994000" />
+      <workItem from="1603137343369" duration="4461000" />
+      <workItem from="1603196884698" duration="24000" />
+      <workItem from="1603196923415" duration="12000" />
+      <workItem from="1603196968387" duration="278000" />
+      <workItem from="1603197742098" duration="575000" />
+      <workItem from="1603198346624" duration="33000" />
+      <workItem from="1603198439076" duration="294000" />
+      <workItem from="1603216812103" duration="322000" />
+      <workItem from="1603217158002" duration="108000" />
     </task>
     <task id="LOCAL-00001" summary="change">
       <created>1601905377366</created>
@@ -320,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602943869227</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Completed Deque homework correctly and added RedBlackTree.py implementation">
+      <created>1603195260918</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1603195260918</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,17 +359,18 @@
     <MESSAGE value="Done homework on deque" />
     <MESSAGE value="Fully done homework on deque" />
     <MESSAGE value="minor change" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor change" />
+    <MESSAGE value="Completed Deque homework correctly and added RedBlackTree.py implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed Deque homework correctly and added RedBlackTree.py implementation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1602307926301">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1602307926301" />
-    <state x="230" y="0" width="977" height="761" key="CommitChangelistDialog2" timestamp="1602943869076">
+    <state x="230" y="0" width="977" height="761" key="CommitChangelistDialog2" timestamp="1603195260674">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="230" y="0" width="977" height="761" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1602943869076" />
+    <state x="230" y="0" width="977" height="761" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1603195260674" />
     <state width="1398" height="502" key="GridCell.Tab.0.bottom" timestamp="1603195098436">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -385,18 +403,18 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="427" y="160" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1602923574109" />
-    <state x="177" y="178" key="SettingsEditor" timestamp="1603177642352">
+    <state x="211" y="178" key="SettingsEditor" timestamp="1603217262352">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="177" y="178" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1603177642352" />
+    <state x="211" y="178" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1603217262352" />
     <state x="598" y="371" key="VCS.EditChangelistDialog" timestamp="1602076826572">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="598" y="371" key="VCS.EditChangelistDialog/0.0.1440.900@0.0.1440.900" timestamp="1602076826572" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1602927460889">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1603195267212">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1602927460889" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603195267212" />
     <state x="383" y="194" width="672" height="678" key="search.everywhere.popup" timestamp="1602923345561">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
