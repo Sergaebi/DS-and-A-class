@@ -6,8 +6,17 @@
 class CyclicDeque:
 
     def __init__(self):
-        self.items = [None, None, None, None, None, None, None, None]
+        self.items = [None]
         self.size = 0
+
+    def double_size(self):
+        new_size = len(self.items) * 2
+        new_items = []
+        for i in range(new_size):
+            new_items.append(None)
+        for item in range(len(self.items)):
+            new_items[item] = self.items[item]
+        self.items = new_items
 
     def is_full(self):
         if self.size == len(self.items):
@@ -19,8 +28,7 @@ class CyclicDeque:
 
     def insert_first(self, data):
         if self.is_full():
-            print("Overflow!")
-            return
+            self.double_size()
         if self.items[0] is None:
             self.items[0] = data
             self.size += 1
@@ -28,12 +36,13 @@ class CyclicDeque:
             if self.items[-1] is None:
                 self.items.pop(-1)
                 self.items.insert(0, data)
+                self.size += 1
 
     def insert_last(self, data):
         if self.is_full():
-            print("Overflow!")
-            return
-        self.items[self.size + 1] = data
+            self.double_size()
+        self.items[self.size] = data
+        self.size += 1
 
     def deleteFirst(self):
         self.items.pop(0)
@@ -41,14 +50,14 @@ class CyclicDeque:
         self.size -= 1
 
     def deleteLast(self):
-        self.items[self.size + 1] = None
+        self.items[self.size - 1] = None
         self.size -= 1
 
     def getFirst(self):
         return self.items[0]
 
     def getLast(self):
-        return self.items[self.size + 1]
+        return self.items[self.size - 1]
 
     def __repr__(self):
         print("Printing Cyclic Deque: ", end="\t")
@@ -302,7 +311,7 @@ def main():
     deque.insert_first(20)
     deque.insert_last(50)
 
-    if deque.items == [20, 10, 50, None, None, None, None, None]:
+    if deque.items == [20, 10, 50, None]:
         print("\n\tTesting add first and last for Cyclic Deque: PASS")
     else:
         print("\n\tTesting add first and last for Cyclic Deque: FAIL")
@@ -316,7 +325,7 @@ def main():
     deque.deleteLast()
     deque.deleteFirst()
 
-    if deque.items == [10, None, None, None, None, None, None, None]:
+    if deque.items == [10, None, None, None]:
         print("\n\tTesting delete first and last for Cyclic Deque: PASS")
     else:
         print("\n\tTesting delete first and last for Cyclic Deque: FAIL")
@@ -513,4 +522,5 @@ def main():
     print(odd_position, end="")
 
 
-main()
+if __name__ == '__main__':
+    main()
