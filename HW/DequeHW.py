@@ -196,17 +196,15 @@ class DoubleLinkedList:
 
     def remove(self, data):
         current_node = self.first
-        previous_node = None
         while current_node is not None:
             if current_node.data == data:
-                if previous_node is not None:
-                    previous_node.next = current_node.next
+                if current_node.previous is not None:
+                    current_node.previous.next = current_node.next
                 else:
                     self.first = current_node.next
                 self.size -= 1
                 return
             else:
-                previous_node = current_node
                 current_node = current_node.next
 
     def __repr__(self):
