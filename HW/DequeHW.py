@@ -164,7 +164,7 @@ class DoubleLinkedList:
                         self.first = new_node
                     else:
                         current_node.previous.next = new_node
-                        current_node.next.previous = new_node
+                        current_node.previous = new_node
                     self.size += 1
                     return
                 else:
