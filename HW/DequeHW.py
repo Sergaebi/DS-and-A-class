@@ -155,21 +155,19 @@ class DoubleLinkedList:
 
     def insert_before(self, data, data_to_check):
         if self.first and self.last:
-            previous_node = None
             current_node = self.first
             while current_node is not None:
                 if current_node.data == data_to_check:
-                    new_node = Node(data, current_node, previous_node)
-                    if previous_node is None:
+                    new_node = Node(data, current_node, current_node.previous)
+                    if current_node.previous is None:
                         self.first.previous = new_node
                         self.first = new_node
                     else:
-                        previous_node.next = new_node
+                        current_node.previous.next = new_node
                         current_node.next.previous = new_node
                     self.size += 1
                     return
                 else:
-                    previous_node = current_node
                     current_node = current_node.next
             print("Nothing to insert after")
             return
