@@ -11,6 +11,7 @@ class Node:
 
 
 class RedBlackTree:
+
     def __init__(self, List=None):
         self.TNULL = Node(0)
         self.TNULL.color = 0
