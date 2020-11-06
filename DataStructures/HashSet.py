@@ -111,9 +111,10 @@ class HashSet:
 
 
 HS = HashSet(5)
-HS.add(36)
+HS.add(48)
 HS.add(37)
 HS.add(90)
 HS.add(80)
 HS.add(70)
+HS.add(75)
 print(HS)
