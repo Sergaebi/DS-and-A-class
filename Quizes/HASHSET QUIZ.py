@@ -44,7 +44,7 @@ class HashMap:
                 if element.value == value:
                     return element.key
 
-    # This function should remove the entry with specified key and return the value. In case if the key does not exist, None should be returned
+    # This function should remove the entry with specified key and return the value. In case if the key does not exist, None should be returned.
     def remove(self, key):
         index = self._hash(key)
         while self._hashtable[index] is not None:
@@ -121,8 +121,8 @@ class HashSet:
             if not isYield:
                 break
 
-    def levelOrderIteratorWithQueue(self):
-        yield None
+    # def levelOrderIteratorWithQueue(self):
+    #     yield None
 
     def _hash(self, element):
         return hash(element) % self._capacity
@@ -167,7 +167,7 @@ class HashSet:
         return self._size
 
     def union(self, s):
-        newSet = HashSet(self._size + s._size)
+        newSet = HashSet(self._size + s.size())
         for element in self:
             newSet.add(element)
         for element in s:
@@ -259,9 +259,9 @@ def testing_remove():
     print("\nREMOVING FROM HASHSET: PASSED\n")
 
     if H.hasKey(3) == 4:
-        print("HASKEY: PASSED")
+        print("HAS KEY: PASSED")
     else:
-        print("HASKEY: FAILED")
+        print("HAS KEY: FAILED")
 
 
 testing_union()
