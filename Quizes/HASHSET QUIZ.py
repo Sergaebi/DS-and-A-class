@@ -88,9 +88,9 @@ class HashMap:
 
 class Node:
 
-    def __init__(self, data, next=None):
+    def __init__(self, data, next_element=None):
         self.data = data
-        self.next = next
+        self.next = next_element
 
     def __repr__(self):
         string = ""
