@@ -24,6 +24,7 @@ class Main:
             elif show_or_calculate == "4":
                 file = FilesAndData.list_and_change_file()
             else:
+                file.exit_and_save()
                 print('Bye!')
                 break
 

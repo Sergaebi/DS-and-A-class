@@ -5,6 +5,7 @@ import os
 import os.path as op
 import pandas as pd
 from tabulate import tabulate
+from . import HashTable
 
 
 class FilesAndData:
@@ -26,6 +27,16 @@ class FilesAndData:
         else:
             with open(self.file_name, 'r') as _file:
                 self.data = js.load(_file)
+        self.vector_list = HashTable.HashTable()
+        self.matrix_list = HashTable.HashTable()
+        for vector in self.data[0].items():
+            self.vector_list.put(vector[0], vector[1])
+        for matrix in self.data[1].items():
+            self.matrix_list.put(matrix[0], matrix[1])
+        self.data = [self.vector_list, self.matrix_list]
+        # print(self.vector_list)
+        # print(self.matrix_list)
+        # print(self.data)
 
     def show_or_manipulate_data(self):
         """This function allows user to display, rename, delete data from Json file."""
@@ -42,7 +53,7 @@ class FilesAndData:
             if matrix is None:
                 while True:
                     name = input("\nEnter the under which you want to save the calculation.\n> ")
-                    if name in self.data[0]:
+                    if self.data[0].get(name) is not None:
                         print("\nSuch vector already exists!")
                     else:
                         if coordinates:
@@ -70,19 +81,19 @@ class FilesAndData:
                                 'Angle': angle
                             }
                         break
-                with open(self.file_name, 'w') as file2:
-                    js.dump(self.data, file2, indent=True)
+                # with open(self.file_name, 'w') as file2:
+                #     js.dump(self.data, file2, indent=True)
             else:
                 while True:
                     print("\nEnter the name under which you want to save the calculation.")
                     name = input("\r> ")
-                    if name in self.data[1]:
+                    if self.data[1].get(name) is not None:
                         print("\nSuch matrix already exists!")
                     else:
                         self.data[1][name] = matrix.tolist()
                         break
-                with open(self.file_name, 'w') as file2:
-                    js.dump(self.data, file2, indent=True)
+                # with open(self.file_name, 'w') as file2:
+                #     js.dump(self.data, file2, indent=True)
 
     def show_vector(self):
         """
@@ -122,7 +133,8 @@ class FilesAndData:
                 if new_name in self.data[0]:
                     print("Vector with this name already exists!")
                 else:
-                    self.data[0][new_name] = self.data[0].pop(name)
+                    self.data[0][new_name] = self.data[0].get(name)
+                    self.data[0].remove(name)
                     with open("Vector_Data.json", 'w') as file2:
                         js.dump(self.data, file2, indent=True)
                     print("\nVector successfully renamed.")
@@ -146,7 +158,7 @@ class FilesAndData:
                 insure_delete = input('''Enter "1" if you are sure you want to delete the vector.
                                          \rEnter anything else to return\n> ''')
                 if insure_delete == "1":
-                    del self.data[0][name]
+                    self.data[0].remove(name)
                     with open(self.file_name, 'w') as file2:
                         js.dump(self.data, file2, indent=True)
                     print("\nVector was deleted.")
@@ -167,7 +179,7 @@ class FilesAndData:
         self.print_all(7)
         display_wish2 = input("> ")
         if display_wish2 == "1":
-            for i in self.data[1].items():
+            for i in self.data[1]:
                 print(f"\n{i[0]}:")
                 if type(i[1][0]) is int:
                     print(i[1])
@@ -193,7 +205,8 @@ class FilesAndData:
                         print("Matrix with this name already exists!")
                         self.show_matrix()
                     else:
-                        self.data[1][new_name] = self.data[1].pop(name_matrix)
+                        self.data[1][new_name] = self.data[1].get(name_matrix)
+                        self.data[1].remove(name_matrix)
                         with open(self.file_name, 'w') as file2:
                             js.dump(self.data, file2, indent=True)
                         print("\nMatrix successfully renamed.")
@@ -207,7 +220,7 @@ class FilesAndData:
                 insure_delete = input('''Enter "1" if you are sure you want to delete the matrix.
                                          \rEnter anything else to return\n> ''')
                 if insure_delete == "1":
-                    del self.data[1][name]
+                    self.data[1].remove(name)
                     with open(self.file_name, 'w') as file2:
                         js.dump(self.data, file2, indent=True)
                     print("\nMatrix was deleted.")
@@ -333,3 +346,18 @@ class FilesAndData:
         elif which_to_print == 11:
             print('''There is no saved vector with this name!
                      \rPlease do some calculations and save data to use this function.''')
+
+    def exit_and_save(self):
+        dictionary = [{}, {}]
+        try:
+            for vector in self.vector_list:
+                dictionary[0][vector.key] = vector.value
+        except AttributeError:
+            pass
+        try:
+            for matrix in self.matrix_list:
+                dictionary[1][matrix.key] = matrix.value
+        except AttributeError:
+            pass
+        with open(self.file_name, 'w') as file:
+            js.dump(dictionary, file, indent=True)

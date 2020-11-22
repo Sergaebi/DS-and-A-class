@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="080b1e11-9114-4604-b5b5-d59f593f7e0e" name="Default Changelist" comment="">
+    <list default="true" id="080b1e11-9114-4604-b5b5-d59f593f7e0e" name="Default Changelist" comment="minor change">
+      <change afterPath="$PROJECT_DIR$/HW/DataStructures/Deque.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW/DataStructures/LinkedListADT.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW/DataStructures/StackADT.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OOP/LinearAlgebraCalculatorWithHashTable/Data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OOP/LinearAlgebraCalculatorWithHashTable/HashTable.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOP/LinearAlgebraCalculator/Data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOP/LinearAlgebraCalculator/FilesAndData.py" beforeDir="false" afterPath="$PROJECT_DIR$/OOP/LinearAlgebraCalculatorWithHashTable/FilesAndData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOP/LinearAlgebraCalculator/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/OOP/LinearAlgebraCalculatorWithHashTable/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOP/LinearAlgebraCalculator/Matrix.py" beforeDir="false" afterPath="$PROJECT_DIR$/OOP/LinearAlgebraCalculatorWithHashTable/Matrix.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOP/LinearAlgebraCalculator/Vectors.py" beforeDir="false" afterPath="$PROJECT_DIR$/OOP/LinearAlgebraCalculatorWithHashTable/Vectors.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +50,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true&#10;/Users/apple/Programming_Projects/PycharmProjects/DS&amp;A Class/SCRATCH.py" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/HW/DataStructures" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -51,30 +61,12 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Encrypter" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/HW/DataStructures" />
+      <recent name="$PROJECT_DIR$/OOP/LinearAlgebraCalculator" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.HASHSET QUIZ">
-    <configuration name="DequeHW" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DS&amp;A Class" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HW" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HW/DequeHW.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.Main">
     <configuration name="HASHSET QUIZ" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DS&amp;A Class" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -111,6 +103,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataStructures/HashSet.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="HashTable" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DS&amp;A Class" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/OOP/LinearAlgebraCalculator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/OOP/LinearAlgebraCalculator/HashTable.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -165,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.HASHSET QUIZ" />
-        <item itemvalue="Python.SCRATCH" />
-        <item itemvalue="Python.HashSet" />
         <item itemvalue="Python.Main" />
-        <item itemvalue="Python.DequeHW" />
+        <item itemvalue="Python.HashTable" />
+        <item itemvalue="Python.SCRATCH" />
+        <item itemvalue="Python.HASHSET QUIZ" />
+        <item itemvalue="Python.HashSet" />
       </list>
     </recent_temporary>
   </component>
@@ -227,7 +241,13 @@
       <workItem from="1603530488793" duration="542000" />
       <workItem from="1604070706836" duration="109000" />
       <workItem from="1604567678269" duration="3496000" />
-      <workItem from="1604639362654" duration="4896000" />
+      <workItem from="1604639362654" duration="5508000" />
+      <workItem from="1605126446216" duration="355000" />
+      <workItem from="1605512308542" duration="1553000" />
+      <workItem from="1605612721139" duration="3831000" />
+      <workItem from="1605633813262" duration="1498000" />
+      <workItem from="1605685392226" duration="2565000" />
+      <workItem from="1606065145906" duration="376000" />
     </task>
     <task id="LOCAL-00001" summary="change">
       <created>1601905377366</created>
@@ -404,7 +424,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604651972123</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="minor change">
+      <created>1604652549721</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1604652549722</updated>
+    </task>
+    <task id="LOCAL-00027" summary="minor change">
+      <created>1604652637027</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1604652637027</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,52 +462,56 @@
     <MESSAGE value="Minor change" />
     <MESSAGE value="Fixed insert before function" />
     <MESSAGE value="Fixed remove function" />
-    <MESSAGE value="minor change" />
     <MESSAGE value="implemented HashSet.py" />
     <MESSAGE value="Quiz Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Quiz Done" />
+    <MESSAGE value="minor change" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor change" />
   </component>
   <component name="WindowStateProjectService">
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1602307926301">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1602307926301" />
-    <state x="230" y="0" width="977" height="761" key="CommitChangelistDialog2" timestamp="1604651971883">
+    <state x="230" y="0" width="977" height="761" key="CommitChangelistDialog2" timestamp="1605685519239">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="230" y="0" width="977" height="761" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1604651971883" />
-    <state width="1398" height="227" key="GridCell.Tab.0.bottom" timestamp="1604652289787">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="230" y="0" width="977" height="761" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1605685519239" />
+    <state width="1398" height="409" key="GridCell.Tab.0.bottom" timestamp="1605637510137">
+      <screen x="0" y="0" width="1440" height="811" />
     </state>
     <state width="1398" height="208" key="GridCell.Tab.0.bottom/0.0.1440.761@0.0.1440.761" timestamp="1602400163775" />
-    <state width="1398" height="232" key="GridCell.Tab.0.bottom/0.0.1440.771@0.0.1440.771" timestamp="1603270240604" />
+    <state width="1398" height="227" key="GridCell.Tab.0.bottom/0.0.1440.771@0.0.1440.771" timestamp="1604653210882" />
     <state width="1398" height="259" key="GridCell.Tab.0.bottom/0.0.1440.780@0.0.1440.780" timestamp="1604571728749" />
     <state width="1398" height="396" key="GridCell.Tab.0.bottom/0.0.1440.794@0.0.1440.794" timestamp="1601628957084" />
-    <state width="1398" height="227" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1604652289787" />
-    <state width="1398" height="227" key="GridCell.Tab.0.center" timestamp="1604652289786">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="409" key="GridCell.Tab.0.bottom/0.0.1440.811@0.0.1440.811" timestamp="1605637510136" />
+    <state width="1398" height="409" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605635366247" />
+    <state width="1398" height="409" key="GridCell.Tab.0.center" timestamp="1605637510134">
+      <screen x="0" y="0" width="1440" height="811" />
     </state>
     <state width="1398" height="208" key="GridCell.Tab.0.center/0.0.1440.761@0.0.1440.761" timestamp="1602400163773" />
-    <state width="1398" height="232" key="GridCell.Tab.0.center/0.0.1440.771@0.0.1440.771" timestamp="1603270240602" />
+    <state width="1398" height="227" key="GridCell.Tab.0.center/0.0.1440.771@0.0.1440.771" timestamp="1604653210877" />
     <state width="1398" height="259" key="GridCell.Tab.0.center/0.0.1440.780@0.0.1440.780" timestamp="1604571728746" />
     <state width="1398" height="396" key="GridCell.Tab.0.center/0.0.1440.794@0.0.1440.794" timestamp="1601628957082" />
-    <state width="1398" height="227" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1604652289786" />
-    <state width="1398" height="227" key="GridCell.Tab.0.left" timestamp="1604652289785">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="409" key="GridCell.Tab.0.center/0.0.1440.811@0.0.1440.811" timestamp="1605637510134" />
+    <state width="1398" height="409" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1605635366245" />
+    <state width="1398" height="409" key="GridCell.Tab.0.left" timestamp="1605637509898">
+      <screen x="0" y="0" width="1440" height="811" />
     </state>
     <state width="1398" height="208" key="GridCell.Tab.0.left/0.0.1440.761@0.0.1440.761" timestamp="1602400163770" />
-    <state width="1398" height="232" key="GridCell.Tab.0.left/0.0.1440.771@0.0.1440.771" timestamp="1603270240600" />
+    <state width="1398" height="227" key="GridCell.Tab.0.left/0.0.1440.771@0.0.1440.771" timestamp="1604653210870" />
     <state width="1398" height="259" key="GridCell.Tab.0.left/0.0.1440.780@0.0.1440.780" timestamp="1604571728744" />
     <state width="1398" height="396" key="GridCell.Tab.0.left/0.0.1440.794@0.0.1440.794" timestamp="1601628957079" />
-    <state width="1398" height="227" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1604652289785" />
-    <state width="1398" height="227" key="GridCell.Tab.0.right" timestamp="1604652289786">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="409" key="GridCell.Tab.0.left/0.0.1440.811@0.0.1440.811" timestamp="1605637509898" />
+    <state width="1398" height="409" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1605635366243" />
+    <state width="1398" height="409" key="GridCell.Tab.0.right" timestamp="1605637510135">
+      <screen x="0" y="0" width="1440" height="811" />
     </state>
     <state width="1398" height="208" key="GridCell.Tab.0.right/0.0.1440.761@0.0.1440.761" timestamp="1602400163774" />
-    <state width="1398" height="232" key="GridCell.Tab.0.right/0.0.1440.771@0.0.1440.771" timestamp="1603270240603" />
+    <state width="1398" height="227" key="GridCell.Tab.0.right/0.0.1440.771@0.0.1440.771" timestamp="1604653210879" />
     <state width="1398" height="259" key="GridCell.Tab.0.right/0.0.1440.780@0.0.1440.780" timestamp="1604571728747" />
     <state width="1398" height="396" key="GridCell.Tab.0.right/0.0.1440.794@0.0.1440.794" timestamp="1601628957083" />
-    <state width="1398" height="227" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1604652289786" />
+    <state width="1398" height="409" key="GridCell.Tab.0.right/0.0.1440.811@0.0.1440.811" timestamp="1605637510135" />
+    <state width="1398" height="409" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1605635366246" />
     <state x="240" y="192" key="IDE.errors.dialog" timestamp="1603435919390">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -491,10 +529,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="598" y="371" key="VCS.EditChangelistDialog/0.0.1440.900@0.0.1440.900" timestamp="1602076826572" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1604651976831">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1604652639077">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1604651976831" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1604652639077" />
     <state x="383" y="194" width="672" height="678" key="search.everywhere.popup" timestamp="1604651309439">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -502,15 +540,15 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DS_A_Class$CircularQueue.coverage" NAME="CircularQueue Coverage Results" MODIFIED="1602490661661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataStructures" />
-    <SUITE FILE_PATH="coverage/DS_A_Class$SCRATCH.coverage" NAME="SCRATCH Coverage Results" MODIFIED="1604652145632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DS_A_Class$SCRATCH.coverage" NAME="SCRATCH Coverage Results" MODIFIED="1605614797143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DS_A_Class$Graph.coverage" NAME="Graph Coverage Results" MODIFIED="1602488484015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataStructures" />
     <SUITE FILE_PATH="coverage/DS_A_Class$StackADT_HW.coverage" NAME="StackADT_HW Coverage Results" MODIFIED="1603266324666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW" />
-    <SUITE FILE_PATH="coverage/DS_A_Class$HashTable.coverage" NAME="HashTable Coverage Results" MODIFIED="1602446079742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataStructures" />
-    <SUITE FILE_PATH="coverage/DS_A_Class$HASHSET_QUIZ.coverage" NAME="HASHSET QUIZ Coverage Results" MODIFIED="1604652289777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Quizes" />
+    <SUITE FILE_PATH="coverage/DS_A_Class$HashTable.coverage" NAME="HashTable Coverage Results" MODIFIED="1605616840671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OOP/LinearAlgebraCalculator" />
+    <SUITE FILE_PATH="coverage/DS_A_Class$HASHSET_QUIZ.coverage" NAME="HASHSET QUIZ Coverage Results" MODIFIED="1604652811643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Quizes" />
     <SUITE FILE_PATH="coverage/DS_A_Class$LinkedList_HW.coverage" NAME="LinkedList_HW Coverage Results" MODIFIED="1602920359555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW" />
     <SUITE FILE_PATH="coverage/DS_A_Class$Decrypt_file.coverage" NAME="Decrypt_file Coverage Results" MODIFIED="1601487121655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DS_A_Class$HashSet.coverage" NAME="HashSet Coverage Results" MODIFIED="1604641183609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataStructures" />
-    <SUITE FILE_PATH="coverage/DS_A_Class$Main.coverage" NAME="Main Coverage Results" MODIFIED="1603530571252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OOP/LinearAlgebraCalculator" />
+    <SUITE FILE_PATH="coverage/DS_A_Class$Main.coverage" NAME="Main Coverage Results" MODIFIED="1605635314504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OOP/LinearAlgebraCalculator" />
     <SUITE FILE_PATH="coverage/DS_A_Class$Encrypt_file.coverage" NAME="Encrypt_file Coverage Results" MODIFIED="1601485696327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DS_A_Class$BinarySearchTree_Full_Implementation.coverage" NAME="BinarySearchTree Full Implementation Coverage Results" MODIFIED="1601905120746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data Structures " />
     <SUITE FILE_PATH="coverage/DS_A_Class$Queue_LinkedList.coverage" NAME="Queue_LinkedList Coverage Results" MODIFIED="1602914547159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataStructures" />
