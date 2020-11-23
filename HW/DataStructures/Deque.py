@@ -1,3 +1,8 @@
+
+# Problem 1
+# -----------------------------------------------------------------
+
+
 class CyclicDeque:
 
     def __init__(self):
@@ -58,6 +63,10 @@ class CyclicDeque:
         print("Printing Cyclic Deque: ", end="\t")
         print(self.items)
         return ""
+
+
+# Problem 2 and 3
+# -----------------------------------------------------------------
 
 
 class Node:
@@ -210,7 +219,8 @@ class DoubleLinkedList:
         return ""
 
 
-class DequeWithDoubleLinkedList:
+# Deque with doubly linked list
+class Deque:
 
     def __init__(self):
         self.items = DoubleLinkedList()
@@ -253,3 +263,260 @@ class DequeWithDoubleLinkedList:
             deque.append(current_node.data)
             current_node = current_node.next
         return "Printing Deque: " + str(deque) + "\n\n"
+
+
+# Problem 4
+# -----------------------------------------------------------------
+
+
+def divide_to_odd_and_even_linked_list(linked_list: DoubleLinkedList):
+    odd_position_list = DoubleLinkedList()
+    even_position_list = DoubleLinkedList()
+    current_node = linked_list.get_first()
+    while current_node is not None:
+        even_position_list.insert_last(current_node.data)
+        linked_list.remove(current_node.data)
+        try:
+            current_node = current_node.next.next
+        except AttributeError:
+            break
+    current_node = linked_list.get_first()
+    while current_node is not None:
+        odd_position_list.insert_last(current_node.data)
+        linked_list.remove(current_node.data)
+        current_node = current_node.next
+    return even_position_list, odd_position_list
+
+
+# Problem 5 TESTING
+# -----------------------------------------------------------------
+
+
+def main():
+
+    # TESTING PROBLEM 1
+    # -----------------------------------------------------------------------------------------------------------
+
+    print("TESTING Problem 1: CyclicDeque")
+    deque = CyclicDeque()
+
+    # testing add_first and add_last for CyclicDeque class
+    # ----------------------------------------------------
+
+    deque.insert_first(10)
+    deque.insert_first(20)
+    deque.insert_last(50)
+
+    if deque.items == [20, 10, 50, None]:
+        print("\n\tTesting add first and last for Cyclic Deque: PASS")
+    else:
+        print("\n\tTesting add first and last for Cyclic Deque: FAIL")
+
+    print("\t", end="")
+    print(deque)
+
+    # testing delete first and last for CyclicDeque class
+    # ----------------------------------------------------
+
+    deque.deleteLast()
+    deque.deleteFirst()
+
+    if deque.items == [10, None, None, None]:
+        print("\n\tTesting delete first and last for Cyclic Deque: PASS")
+    else:
+        print("\n\tTesting delete first and last for Cyclic Deque: FAIL")
+
+    print("\t", end="")
+    print(deque)
+
+    # testing get first and last for CyclicDeque class
+    # ----------------------------------------------------
+
+    if deque.getFirst() == deque.getLast() == 10:
+        print("\n\tTesting get first and last for Cyclic Deque: PASS")
+    else:
+        print("\n\tTesting get first and last for Cyclic Deque: FAIL")
+
+    print("\t", end="")
+    print(deque)
+
+    # TESTING PROBLEM 2
+    # -----------------------------------------------------------------------------------------------------------
+
+    print("TESTING Problem 2: Deque with DoubleLinkedList")
+    deque = Deque()
+
+    # test add_first and add_last functions
+    # ----------------------------------------------------
+
+    deque.add_first(1)
+    deque.add_first("a")
+    deque.add_last("b")
+    deque.add_last("c")
+    deque.add_first(4)
+
+    if deque.get_first().data == 4 and deque.get_last().data == "c":
+        print("\n\tInsert First/Last Test: PASS")
+    else:
+        print("\n\tInsert First/Last Test: FAIL")
+
+    print("\t", end="")
+    print(deque, end="")
+
+    # test removeFirst and removeLast functions
+    # ----------------------------------------------------
+
+    deque.remove_first()
+    deque.remove_last()
+    deque.remove_last()
+
+    if deque.get_first().data == "a" and deque.get_last().data == 1:
+        print("\tRemove First/Last Test: PASS")
+    else:
+        print("\tRemove First/Last Test: FAIL")
+
+    print("\t", end="")
+    print(deque, end="")
+
+    # test get first, last, and size
+    # ----------------------------------------------------
+
+    if deque.items.size == deque.get_size():
+        print("\tGet list size: PASS")
+    else:
+        print("\tGet list size: FAIL")
+
+    if deque.items.first == deque.get_first():
+        print("\n\tGet first size: PASS")
+    else:
+        print("\n\tGet first size: FAIL")
+
+    if deque.items.last == deque.get_last():
+        print("\n\tGet last size: PASS")
+    else:
+        print("\n\tGet last size: FAIL")
+
+    # TESTING PROBLEM 3
+    # -----------------------------------------------------------------------------------------------------------
+
+    print("\nTESTING Problem 3: DoubleLinkedList")
+    linked_list = DoubleLinkedList()
+
+    # test insertFirst and insertLast functions
+    # ----------------------------------------------------
+
+    linked_list.insert_first(1)
+    linked_list.insert_first("a")
+    linked_list.insert_last("b")
+    linked_list.insert_last("c")
+    linked_list.insert_first(4)
+
+    if linked_list.get_first().data == 4 and linked_list.get_last().data == "c":
+        print("\n\tInsert First/Last Test: PASS")
+    else:
+        print("\n\tInsert First/Last Test: FAIL")
+
+    print("\t", end="")
+    print(linked_list, end="")
+
+    # test remove_first and remove_last functions
+    # ----------------------------------------------------
+
+    linked_list.remove_first()
+    linked_list.remove_last()
+    linked_list.remove_last()
+
+    if linked_list.get_first().data == "a" and linked_list.get_last().data == 1:
+        print("\tRemove First/Last Test: PASS")
+    else:
+        print("\tRemove First/Last Test: FAIL")
+
+    print("\t", end="")
+    print(linked_list, end="")
+
+    # test get first, last, and size
+    # ----------------------------------------------------
+
+    if linked_list.size == linked_list.get_size():
+        print("\tGet list size: PASS")
+    else:
+        print("\tGet list size: FAIL")
+
+    if linked_list.first == linked_list.get_first():
+        print("\n\tGet first size: PASS")
+    else:
+        print("\n\tGet first size: FAIL")
+
+    if linked_list.last == linked_list.get_last():
+        print("\n\tGet last size: PASS")
+    else:
+        print("\n\tGet last size: FAIL")
+
+    # test insert After and Before functions
+    # ----------------------------------------------------
+
+    linked_list.insert_after(4, "a")
+    linked_list.insert_before("c", 4)
+
+    current_node = linked_list.first
+    list_to_check = []
+    while current_node is not None:
+        list_to_check.append(current_node.data)
+        current_node = current_node.next
+    if list_to_check == ["a", "c", 4, 1]:
+        print("\n\tInsert Before After Test: PASS")
+    else:
+        print("\n\tInsert Before After Test: FAIl")
+
+    print("\t", end="")
+    print(linked_list, end="")
+
+    # TESTING PROBLEM 4
+    # -----------------------------------------------------------------------------------------------------------
+
+    print("TESTING Problem 4: Even and Odd position\n")
+
+    linked_list.insert_first(23)
+    linked_list.insert_first(53)
+    linked_list.insert_first(49)
+
+    print("\t", end="")
+    print("Old list before dividing : ", end="")
+    print(linked_list, end="")
+
+    even_position, odd_position = divide_to_odd_and_even_linked_list(linked_list)
+
+    result = True
+
+    current_node = even_position.first
+    list_to_check = []
+    while current_node is not None:
+        list_to_check.append(current_node.data)
+        current_node = current_node.next
+
+    if list_to_check != [49, 23, 'c', 1]:
+        result = False
+
+    current_node = odd_position.first
+    list_to_check = []
+    while current_node is not None:
+        list_to_check.append(current_node.data)
+        current_node = current_node.next
+
+    if list_to_check != [53, 'a', 4]:
+        result = False
+
+    if result:
+        print("\n\tDivide to two lists at even and odd positions Test: PASS\n")
+    else:
+        print("\n\tDivide to two lists at even and odd positions Test: FAIL\n")
+
+    print("\tEven position list: ", end="")
+    print(even_position, end="")
+
+    print("\tOdd position list: ", end="")
+    print(odd_position, end="")
+
+
+if __name__ == '__main__':
+    main()

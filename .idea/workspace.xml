@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="080b1e11-9114-4604-b5b5-d59f593f7e0e" name="Default Changelist" comment="minor change">
-      <change afterPath="$PROJECT_DIR$/HW/DataStructures/Deque.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW/DataStructures/LinkedListADT.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW/DataStructures/StackADT.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OOP/LinearAlgebraCalculatorWithHashTable/Data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OOP/LinearAlgebraCalculatorWithHashTable/HashTable.py" afterDir="false" />
+    <list default="true" id="080b1e11-9114-4604-b5b5-d59f593f7e0e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOP/LinearAlgebraCalculator/Data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOP/LinearAlgebraCalculator/FilesAndData.py" beforeDir="false" afterPath="$PROJECT_DIR$/OOP/LinearAlgebraCalculatorWithHashTable/FilesAndData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOP/LinearAlgebraCalculator/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/OOP/LinearAlgebraCalculatorWithHashTable/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOP/LinearAlgebraCalculator/Matrix.py" beforeDir="false" afterPath="$PROJECT_DIR$/OOP/LinearAlgebraCalculatorWithHashTable/Matrix.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOP/LinearAlgebraCalculator/Vectors.py" beforeDir="false" afterPath="$PROJECT_DIR$/OOP/LinearAlgebraCalculatorWithHashTable/Vectors.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +237,7 @@
       <workItem from="1605612721139" duration="3831000" />
       <workItem from="1605633813262" duration="1498000" />
       <workItem from="1605685392226" duration="2565000" />
-      <workItem from="1606065145906" duration="376000" />
+      <workItem from="1606065145906" duration="708000" />
     </task>
     <task id="LOCAL-00001" summary="change">
       <created>1601905377366</created>
@@ -438,7 +428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604652637027</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Done HW, and implemented HashTable.py for my LinearAlgebra Project">
+      <created>1606065704890</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1606065704890</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,17 +462,18 @@
     <MESSAGE value="implemented HashSet.py" />
     <MESSAGE value="Quiz Done" />
     <MESSAGE value="minor change" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor change" />
+    <MESSAGE value="Done HW, and implemented HashTable.py for my LinearAlgebra Project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done HW, and implemented HashTable.py for my LinearAlgebra Project" />
   </component>
   <component name="WindowStateProjectService">
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1602307926301">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1602307926301" />
-    <state x="230" y="0" width="977" height="761" key="CommitChangelistDialog2" timestamp="1605685519239">
+    <state x="230" y="0" width="977" height="761" key="CommitChangelistDialog2" timestamp="1606065704559">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="230" y="0" width="977" height="761" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1605685519239" />
+    <state x="230" y="0" width="977" height="761" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1606065704559" />
     <state width="1398" height="409" key="GridCell.Tab.0.bottom" timestamp="1605637510137">
       <screen x="0" y="0" width="1440" height="811" />
     </state>
@@ -529,10 +527,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="598" y="371" key="VCS.EditChangelistDialog/0.0.1440.900@0.0.1440.900" timestamp="1602076826572" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1604652639077">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1606065712983">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1604652639077" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1606065712983" />
     <state x="383" y="194" width="672" height="678" key="search.everywhere.popup" timestamp="1604651309439">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
