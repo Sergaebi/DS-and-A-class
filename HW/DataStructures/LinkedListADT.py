@@ -347,8 +347,6 @@ class DoubleLinkedList(ListADT):
                 index += 1
         print("No such data")
 
-    # DONE Implement all functions of ListADT abstract class for double linked list
-
 
 def printList(linked_list):
     print("Printing Linked List Elements")
@@ -368,7 +366,6 @@ def printList(linked_list):
 
 
 # DONE TESTING
-# DONE implement a function for list collection which reverses the list
 def reverseList(linked_list: SingleLinkedList):
     previous_node = None
     current_node = linked_list.first
@@ -385,7 +382,6 @@ def reverseList(linked_list: SingleLinkedList):
 
 
 # DONE TESTING
-# DONE implement a function for list collection which updates the list through removing Numeric nodes
 def removeNumericNodes(linked_list: SingleLinkedList):
     current_node = linked_list.get_first()
     while current_node is not None:
@@ -395,7 +391,6 @@ def removeNumericNodes(linked_list: SingleLinkedList):
 
 
 # DONE TESTING
-# DONE implement a function for list collection which updates the list through removing nodes at even positions
 def removeNodesAtEvenPosition(linked_list):
     current_node = linked_list.first
     while current_node is not None:
@@ -573,7 +568,6 @@ def testListFunctions(linked_list):
     if check:
         print("\nRemove numeric values Test: PASS")
     printList(linked_list)
-    # DONE call newly implemented list functions and add tests for them as well similar to the above
 
 
 sl = SingleLinkedList()
