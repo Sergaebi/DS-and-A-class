@@ -167,7 +167,7 @@ class HashSet:
         return self._size
 
     def union(self, s):
-        newSet = HashSet(self._size + s.size())
+        newSet = HashSet(self._size + s.get_size())
         for element in self:
             newSet.add(element)
         for element in s:

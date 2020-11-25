@@ -453,7 +453,7 @@ def testListFunctions(linked_list):
     # DONE
     # ---------------------------------------------------------------------------------------
 
-    if linked_list.size == linked_list.get_size():
+    if linked_list.get_size == linked_list.get_size():
         print("\nGet list size: PASS")
     else:
         print("\nGet list size: FAIL")

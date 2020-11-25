@@ -4,9 +4,11 @@ class Queue:
         self.items: list = []
 
     def enqueue(self, data):
+        print(f"Adding {data}...")
         self.items.append(data)
 
     def dequeue(self):
+        print(f"Removing element...")
         if len(self.items) > 0:
             return self.items.pop(0)
         else:
@@ -25,6 +27,7 @@ def main_testing():
     queue.enqueue(2)
     queue.enqueue(3)
     queue.enqueue(4)
+    print()
     print(queue)
     if queue.items == [2, 3, 4]:
         print("Testing enqueue function: PASS\n")
@@ -34,6 +37,7 @@ def main_testing():
     # testing dequeue function
     queue.dequeue()
     queue.dequeue()
+    print()
     print(queue)
     if queue.items == [4]:
         print("Testing dequeue function: PASS\n")
