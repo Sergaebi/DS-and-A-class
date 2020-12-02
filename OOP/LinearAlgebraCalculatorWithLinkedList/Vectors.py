@@ -1,5 +1,5 @@
 import numpy as np
-from OOP.LinearAlgebraCalculatorWithHashTable.FilesAndData import FilesAndData
+from OOP.LinearAlgebraCalculatorWithLinkedList.FilesAndData import FilesAndData
 
 
 class Vectors:

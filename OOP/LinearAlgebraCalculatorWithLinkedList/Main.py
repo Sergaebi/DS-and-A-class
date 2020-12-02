@@ -1,13 +1,13 @@
-from OOP.LinearAlgebraCalculatorWithHashTable.FilesAndData import FilesAndData
-from OOP.LinearAlgebraCalculatorWithHashTable.Vectors import Vectors
-from OOP.LinearAlgebraCalculatorWithHashTable.Matrix import Matrix
+from OOP.LinearAlgebraCalculatorWithLinkedList.FilesAndData import FilesAndData
+from OOP.LinearAlgebraCalculatorWithLinkedList.Vectors import Vectors
+from OOP.LinearAlgebraCalculatorWithLinkedList.Matrix import Matrix
 
 
 class Main:
 
     @staticmethod
     def main():
-        print("Hello this is the linear algebra calculator!")
+        print("Hello this is the linear algebra calculator which works with Linked List to make operations faster!")
         file = FilesAndData.list_and_change_file()
         while True:
             FilesAndData.print_all(0)
