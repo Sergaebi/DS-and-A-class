@@ -1,6 +1,6 @@
-from OOP.LinearAlgebraCalculatorWithHashTable.FilesAndData import FilesAndData
-from OOP.LinearAlgebraCalculatorWithHashTable.Vectors import Vectors
-from OOP.LinearAlgebraCalculatorWithHashTable.Matrix import Matrix
+from OOP.FinalProjects.LinearAlgebraCalculatorWithHashTable.FilesAndData import FilesAndData
+from OOP.FinalProjects.LinearAlgebraCalculatorWithHashTable.Vectors import Vectors
+from OOP.FinalProjects.LinearAlgebraCalculatorWithHashTable.Matrix import Matrix
 
 
 class Main:

@@ -5,7 +5,7 @@ import os
 import os.path as op
 import pandas as pd
 from tabulate import tabulate
-from . import HashTable
+from . import LinkedList
 
 
 class FilesAndData:
@@ -27,16 +27,15 @@ class FilesAndData:
         else:
             with open(self.file_name, 'r') as _file:
                 self.data = js.load(_file)
-        self.vector_list = HashTable.HashTable()
-        self.matrix_list = HashTable.HashTable()
+        self.vector_list = LinkedList.DoubleLinkedList()
+        self.matrix_list = LinkedList.DoubleLinkedList()
         for vector in self.data[0].items():
-            self.vector_list.put(vector[0], vector[1])
+            self.vector_list.insertFirst(vector[0], vector[1])
         for matrix in self.data[1].items():
-            self.matrix_list.put(matrix[0], matrix[1])
+            self.matrix_list.insertFirst(matrix[0], matrix[1])
         self.data = [self.vector_list, self.matrix_list]
-        # print(self.vector_list)
-        # print(self.matrix_list)
-        # print(self.data)
+        # print(self.data[0])
+        # print(self.data[1])
 
     def show_or_manipulate_data(self):
         """This function allows user to display, rename, delete data from Json file."""
@@ -106,10 +105,20 @@ class FilesAndData:
         self.print_all(3)
         display_wish = input("> ")
         if display_wish == "1":
-            df = pd.DataFrame(self.data[0])
+            dictionary = {}
+            current_node = self.data[0].first
+            while current_node is not None:
+                dictionary[current_node.name] = current_node.data
+                current_node = current_node.next
+            df = pd.DataFrame(dictionary)
             print(tabulate(df.transpose(), headers='keys', tablefmt='fancy_grid', numalign='right'))
             self.show_vector()
         elif display_wish == "2":
+            dictionary = {}
+            current_node = self.data[0].first
+            while current_node is not None:
+                dictionary[current_node.name] = current_node.data
+                current_node = current_node.next
             try:
                 name = input("\nEnter vector's name.\n> ")
                 if self.data[0][name]['Angle'] is not None:
@@ -135,16 +144,21 @@ class FilesAndData:
                 else:
                     self.data[0][new_name] = self.data[0].get(name)
                     self.data[0].remove(name)
-                    with open("Vector_Data.json", 'w') as file2:
-                        js.dump(self.data, file2, indent=True)
+                    # with open("Vector_Data.json", 'w') as file2:
+                    #     js.dump(self.data, file2, indent=True)
                     print("\nVector successfully renamed.")
             else:
                 print("\nThere is no saved vector with this name!")
             self.show_vector()
         elif display_wish == "4":
+            dictionary = {}
+            current_node = self.data[0].first
+            while current_node is not None:
+                dictionary[current_node.name] = current_node.data
+                current_node = current_node.next
             self.print_all(4)
             statistics_wish = input("> ")
-            df = pd.DataFrame(self.data[0])
+            df = pd.DataFrame(dictionary)
             if statistics_wish == "1":
                 print(tabulate(df.transpose().describe(), headers='keys', tablefmt='fancy_grid', numalign='right'))
             elif statistics_wish == "2":
@@ -159,8 +173,8 @@ class FilesAndData:
                                          \rEnter anything else to return\n> ''')
                 if insure_delete == "1":
                     self.data[0].remove(name)
-                    with open(self.file_name, 'w') as file2:
-                        js.dump(self.data, file2, indent=True)
+                    # with open(self.file_name, 'w') as file2:
+                    #     js.dump(self.data, file2, indent=True)
                     print("\nVector was deleted.")
             else:
                 print("\nThere is no saved vector with this name!")
@@ -207,8 +221,8 @@ class FilesAndData:
                     else:
                         self.data[1][new_name] = self.data[1].get(name_matrix)
                         self.data[1].remove(name_matrix)
-                        with open(self.file_name, 'w') as file2:
-                            js.dump(self.data, file2, indent=True)
+                        # with open(self.file_name, 'w') as file2:
+                        #     js.dump(self.data, file2, indent=True)
                         print("\nMatrix successfully renamed.")
                         break
             else:
@@ -221,8 +235,8 @@ class FilesAndData:
                                          \rEnter anything else to return\n> ''')
                 if insure_delete == "1":
                     self.data[1].remove(name)
-                    with open(self.file_name, 'w') as file2:
-                        js.dump(self.data, file2, indent=True)
+                    # with open(self.file_name, 'w') as file2:
+                    #     js.dump(self.data, file2, indent=True)
                     print("\nMatrix was deleted.")
             else:
                 print("\nThere is no saved matrix with this name!")
@@ -349,15 +363,16 @@ class FilesAndData:
 
     def exit_and_save(self):
         dictionary = [{}, {}]
-        try:
-            for vector in self.vector_list:
-                dictionary[0][vector.key] = vector.value
-        except AttributeError:
-            pass
-        try:
-            for matrix in self.matrix_list:
-                dictionary[1][matrix.key] = matrix.value
-        except AttributeError:
-            pass
+
+        current_node = self.data[0].first
+        while current_node is not None:
+            dictionary[0][current_node.name] = current_node.data
+            current_node = current_node.next
+
+        current_node = self.data[1].first
+        while current_node is not None:
+            dictionary[1][current_node.name] = current_node.data
+            current_node = current_node.next
+
         with open(self.file_name, 'w') as file:
             js.dump(dictionary, file, indent=True)

@@ -5,7 +5,7 @@ import os
 import os.path as op
 import pandas as pd
 from tabulate import tabulate
-from . import LinkedList
+from . import HashTable
 
 
 class FilesAndData:
@@ -27,15 +27,16 @@ class FilesAndData:
         else:
             with open(self.file_name, 'r') as _file:
                 self.data = js.load(_file)
-        self.vector_list = LinkedList.DoubleLinkedList()
-        self.matrix_list = LinkedList.DoubleLinkedList()
+        self.vector_list = HashTable.HashTable()
+        self.matrix_list = HashTable.HashTable()
         for vector in self.data[0].items():
-            self.vector_list.insertFirst(vector[0], vector[1])
+            self.vector_list.put(vector[0], vector[1])
         for matrix in self.data[1].items():
-            self.matrix_list.insertFirst(matrix[0], matrix[1])
+            self.matrix_list.put(matrix[0], matrix[1])
         self.data = [self.vector_list, self.matrix_list]
-        # print(self.data[0])
-        # print(self.data[1])
+        # print(self.vector_list)
+        # print(self.matrix_list)
+        # print(self.data)
 
     def show_or_manipulate_data(self):
         """This function allows user to display, rename, delete data from Json file."""
@@ -106,19 +107,15 @@ class FilesAndData:
         display_wish = input("> ")
         if display_wish == "1":
             dictionary = {}
-            current_node = self.data[0].first
-            while current_node is not None:
-                dictionary[current_node.name] = current_node.data
-                current_node = current_node.next
+            for i in self.data[0]:
+                dictionary[str(i.key)] = i.value
             df = pd.DataFrame(dictionary)
             print(tabulate(df.transpose(), headers='keys', tablefmt='fancy_grid', numalign='right'))
             self.show_vector()
         elif display_wish == "2":
             dictionary = {}
-            current_node = self.data[0].first
-            while current_node is not None:
-                dictionary[current_node.name] = current_node.data
-                current_node = current_node.next
+            for i in self.data[0]:
+                dictionary[str(i.key)] = i.value
             try:
                 name = input("\nEnter vector's name.\n> ")
                 if self.data[0][name]['Angle'] is not None:
@@ -152,10 +149,8 @@ class FilesAndData:
             self.show_vector()
         elif display_wish == "4":
             dictionary = {}
-            current_node = self.data[0].first
-            while current_node is not None:
-                dictionary[current_node.name] = current_node.data
-                current_node = current_node.next
+            for i in self.data[0]:
+                dictionary[str(i.key)] = i.value
             self.print_all(4)
             statistics_wish = input("> ")
             df = pd.DataFrame(dictionary)
@@ -363,19 +358,15 @@ class FilesAndData:
 
     def exit_and_save(self):
         dictionary = [{}, {}]
-
-        # print(self.data[0])
-        # print(self.data[1])
-
-        current_node = self.data[0].first
-        while current_node is not None:
-            dictionary[0][current_node.name] = current_node.data
-            current_node = current_node.next
-
-        current_node = self.data[1].first
-        while current_node is not None:
-            dictionary[1][current_node.name] = current_node.data
-            current_node = current_node.next
-
+        try:
+            for vector in self.vector_list:
+                dictionary[0][vector.key] = vector.value
+        except AttributeError:
+            pass
+        try:
+            for matrix in self.matrix_list:
+                dictionary[1][matrix.key] = matrix.value
+        except AttributeError:
+            pass
         with open(self.file_name, 'w') as file:
             js.dump(dictionary, file, indent=True)
