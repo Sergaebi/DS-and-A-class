@@ -182,13 +182,16 @@ class FilesAndData:
         This function allows user to observe matrix part of database.
         :return: None
         """
-        if self.data[1] == {}:
+        dictionary = {}
+        for i in self.data[1]:
+            dictionary[str(i.key)] = i.value
+        if dictionary == {}:
             print("There is no matrix data yet!")
             self.show_or_manipulate_data()
         self.print_all(7)
         display_wish2 = input("> ")
         if display_wish2 == "1":
-            for i in self.data[1]:
+            for i in dictionary.items():
                 print(f"\n{i[0]}:")
                 if type(i[1][0]) is int:
                     print(i[1])
@@ -198,19 +201,19 @@ class FilesAndData:
             self.show_matrix()
         elif display_wish2 == "2":
             name_matrix = input("\nEnter matrix name.\n> ")
-            if name_matrix in self.data[1]:
+            if name_matrix in dictionary:
                 print("\nValue is: ")
-                for i in self.data[1][name_matrix]:
+                for i in dictionary[name_matrix]:
                     print(np.array(i))
             else:
                 self.print_all(10)
             self.show_matrix()
         elif display_wish2 == "3":
             name_matrix = input("\nEnter matrix name which you want to rename.\n> ")
-            if name_matrix in self.data[1]:
+            if name_matrix in dictionary:
                 while True:
                     new_name = input("\nEnter the new name.\n> ")
-                    if new_name in self.data[1]:
+                    if new_name in dictionary:
                         print("Matrix with this name already exists!")
                         self.show_matrix()
                     else:
@@ -225,7 +228,7 @@ class FilesAndData:
             self.show_matrix()
         elif display_wish2 == "4":
             name = input("\nEnter matrix's name which you want to delete.\n> ")
-            if name in self.data[1]:
+            if name in dictionary:
                 insure_delete = input('''Enter "1" if you are sure you want to delete the matrix.
                                          \rEnter anything else to return\n> ''')
                 if insure_delete == "1":
