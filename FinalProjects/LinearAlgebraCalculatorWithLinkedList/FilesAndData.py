@@ -282,8 +282,7 @@ class FilesAndData:
         x_plot = [0, operation[0]]
         y_plot = [0, operation[1]]
         z_plot = [0, operation[2]]
-        fig = plt.figure()
-        ax = fig.gca(projection='3d')
+        ax = plt.axes(projection='3d')
         ax.plot(x_plot, y_plot, z_plot, color='r')
         ax.quiver3D(0, 0, 0, operation[0], operation[1], operation[2],
                     color='r', arrow_length_ratio=0.1)

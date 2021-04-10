@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="080b1e11-9114-4604-b5b5-d59f593f7e0e" name="Default Changelist" comment="minor changes">
-      <change beforePath="$PROJECT_DIR$/.idea/DS&amp;A Class.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DS&amp;A Class.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="080b1e11-9114-4604-b5b5-d59f593f7e0e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataStructures/RedBlackTree.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataStructures/RedBlackTree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalProjects/LinearAlgebraCalculatorWithHashTable/FilesAndData.py" beforeDir="false" afterPath="$PROJECT_DIR$/FinalProjects/LinearAlgebraCalculatorWithHashTable/FilesAndData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalProjects/LinearAlgebraCalculatorWithLinkedList/Data.json" beforeDir="false" afterPath="$PROJECT_DIR$/FinalProjects/LinearAlgebraCalculatorWithLinkedList/Data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FinalProjects/LinearAlgebraCalculatorWithLinkedList/FilesAndData.py" beforeDir="false" afterPath="$PROJECT_DIR$/FinalProjects/LinearAlgebraCalculatorWithLinkedList/FilesAndData.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +43,7 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/OOP/LinearAlgebraCalculatorWithBinaryTree" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -65,7 +60,7 @@
       <recent name="$PROJECT_DIR$/OOP/LinearAlgebraCalculator" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.BinarySearchTreeFullImplementation">
+  <component name="RunManager" selected="Python.SCRATCH">
     <configuration name="BinarySearchTreeFullImplementation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DS&amp;A Class" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -178,9 +173,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.BinarySearchTreeFullImplementation" />
         <item itemvalue="Python.SCRATCH" />
         <item itemvalue="Python.Main (3)" />
+        <item itemvalue="Python.BinarySearchTreeFullImplementation" />
         <item itemvalue="Python.Main (2)" />
         <item itemvalue="Python.HashTable (1)" />
       </list>
@@ -256,7 +251,11 @@
       <workItem from="1607329930492" duration="2731000" />
       <workItem from="1617001638094" duration="21000" />
       <workItem from="1617726871022" duration="3796000" />
-      <workItem from="1617772317026" duration="574000" />
+      <workItem from="1617772317026" duration="1982000" />
+      <workItem from="1617795003077" duration="2028000" />
+      <workItem from="1617819377725" duration="2986000" />
+      <workItem from="1617986889298" duration="21000" />
+      <workItem from="1618036753185" duration="3045000" />
     </task>
     <task id="LOCAL-00001" summary="change">
       <created>1601905377366</created>
@@ -503,7 +502,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607334353269</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="minor changes">
+      <created>1617772985195</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1617772985195</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,42 +545,54 @@
     <option name="LAST_COMMIT_MESSAGE" value="minor changes" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="264" y="0" key="CommitChangelistDialog2" timestamp="1617772464698">
+    <state x="264" y="0" key="CommitChangelistDialog2" timestamp="1617772984487">
       <screen x="0" y="0" width="1440" height="828" />
     </state>
-    <state x="264" y="0" key="CommitChangelistDialog2/0.0.1440.828@0.0.1440.828" timestamp="1617772464698" />
+    <state x="264" y="0" key="CommitChangelistDialog2/0.0.1440.828@0.0.1440.828" timestamp="1617772984487" />
     <state x="508" y="173" key="FileChooserDialogImpl" timestamp="1617772361801">
       <screen x="0" y="0" width="1440" height="828" />
     </state>
     <state x="508" y="173" key="FileChooserDialogImpl/0.0.1440.828@0.0.1440.828" timestamp="1617772361801" />
-    <state width="1878" height="535" key="GridCell.Tab.0.bottom" timestamp="1617733700267">
-      <screen x="0" y="0" width="1920" height="1008" />
+    <state width="1398" height="238" key="GridCell.Tab.0.bottom" timestamp="1618040099062">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1398" height="501" key="GridCell.Tab.0.bottom/0.0.1440.828@0.0.1440.828" timestamp="1617873658385" />
+    <state width="1398" height="238" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1618040099062" />
     <state width="1878" height="535" key="GridCell.Tab.0.bottom/0.0.1920.1008@0.0.1920.1008" timestamp="1617733700267" />
     <state width="1878" height="535" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1617733685822" />
-    <state width="1878" height="535" key="GridCell.Tab.0.center" timestamp="1617733700267">
-      <screen x="0" y="0" width="1920" height="1008" />
+    <state width="1398" height="238" key="GridCell.Tab.0.center" timestamp="1618040099060">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1398" height="501" key="GridCell.Tab.0.center/0.0.1440.828@0.0.1440.828" timestamp="1617873658340" />
+    <state width="1398" height="238" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1618040099060" />
     <state width="1878" height="535" key="GridCell.Tab.0.center/0.0.1920.1008@0.0.1920.1008" timestamp="1617733700267" />
     <state width="1878" height="535" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1617733685821" />
-    <state width="1878" height="535" key="GridCell.Tab.0.left" timestamp="1617733700266">
-      <screen x="0" y="0" width="1920" height="1008" />
+    <state width="1398" height="238" key="GridCell.Tab.0.left" timestamp="1618040099059">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1398" height="501" key="GridCell.Tab.0.left/0.0.1440.828@0.0.1440.828" timestamp="1617873658286" />
+    <state width="1398" height="238" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1618040099059" />
     <state width="1878" height="535" key="GridCell.Tab.0.left/0.0.1920.1008@0.0.1920.1008" timestamp="1617733700266" />
     <state width="1878" height="535" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1617733685820" />
-    <state width="1878" height="535" key="GridCell.Tab.0.right" timestamp="1617733700267">
-      <screen x="0" y="0" width="1920" height="1008" />
+    <state width="1398" height="238" key="GridCell.Tab.0.right" timestamp="1618040099061">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1398" height="501" key="GridCell.Tab.0.right/0.0.1440.828@0.0.1440.828" timestamp="1617873658345" />
+    <state width="1398" height="238" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1618040099061" />
     <state width="1878" height="535" key="GridCell.Tab.0.right/0.0.1920.1008@0.0.1920.1008" timestamp="1617733700267" />
     <state width="1878" height="535" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1617733685821" />
-    <state x="221" y="50" key="SettingsEditor" timestamp="1617772956704">
+    <state x="221" y="50" key="SettingsEditor" timestamp="1617820458481">
       <screen x="0" y="0" width="1440" height="828" />
     </state>
-    <state x="221" y="50" key="SettingsEditor/0.0.1440.828@0.0.1440.828" timestamp="1617772956704" />
+    <state x="221" y="50" key="SettingsEditor/0.0.1440.828@0.0.1440.828" timestamp="1617820458481" />
+    <state x="320" y="151" key="Vcs.Push.Dialog.v2" timestamp="1617772999136">
+      <screen x="0" y="0" width="1440" height="828" />
+    </state>
+    <state x="320" y="151" key="Vcs.Push.Dialog.v2/0.0.1440.828@0.0.1440.828" timestamp="1617772999136" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DS_A_Class$CircularQueue.coverage" NAME="CircularQueue Coverage Results" MODIFIED="1602490661661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataStructures" />
-    <SUITE FILE_PATH="coverage/DS_A_Class$SCRATCH.coverage" NAME="SCRATCH Coverage Results" MODIFIED="1617732802822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DS_A_Class$SCRATCH.coverage" NAME="SCRATCH Coverage Results" MODIFIED="1618040099008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DS_A_Class$Graph.coverage" NAME="Graph Coverage Results" MODIFIED="1602488484015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataStructures" />
     <SUITE FILE_PATH="coverage/DS_A_Class$StackADT_HW.coverage" NAME="StackADT_HW Coverage Results" MODIFIED="1603266324666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW" />
     <SUITE FILE_PATH="coverage/DS_A_Class$BinarySearchTreeFullImplementation.coverage" NAME="BinarySearchTreeFullImplementation Coverage Results" MODIFIED="1617733663981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataStructures" />
@@ -592,7 +610,7 @@
     <SUITE FILE_PATH="coverage/DS_A_Class$BinarySearchTree_Full_Implementation.coverage" NAME="BinarySearchTree Full Implementation Coverage Results" MODIFIED="1601905120746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data Structures " />
     <SUITE FILE_PATH="coverage/DS_A_Class$Queue_LinkedList.coverage" NAME="Queue_LinkedList Coverage Results" MODIFIED="1602914547159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataStructures" />
     <SUITE FILE_PATH="coverage/DS_A_Class$LinkedList.coverage" NAME="LinkedList Coverage Results" MODIFIED="1602086813244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataStructures" />
-    <SUITE FILE_PATH="coverage/DS_A_Class$Main__3_.coverage" NAME="Main (3) Coverage Results" MODIFIED="1607335507212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FinalProjects/LinearAlgebraCalculatorWithLinkedList" />
+    <SUITE FILE_PATH="coverage/DS_A_Class$Main__3_.coverage" NAME="Main (3) Coverage Results" MODIFIED="1617820869637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FinalProjects/LinearAlgebraCalculatorWithLinkedList" />
     <SUITE FILE_PATH="coverage/DS_A_Class$RedBlackTree.coverage" NAME="RedBlackTree Coverage Results" MODIFIED="1603189994395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataStructures" />
     <SUITE FILE_PATH="coverage/DS_A_Class$DequeHW.coverage" NAME="DequeHW Coverage Results" MODIFIED="1603269584447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW" />
   </component>
