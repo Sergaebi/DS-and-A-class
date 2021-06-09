@@ -5,7 +5,7 @@ import os
 import os.path as op
 import pandas as pd
 from tabulate import tabulate
-from . import LinkedList
+import LinkedList
 
 
 class FilesAndData:
